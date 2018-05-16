@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>hello</title>
+
+    <style>
+		a:link{color:black;	}
+		a:visited{color:black;	}
+		a{
+			color:black;
+			text-decoration:none;
+		}
+
+        table{
+
+			width:100%;
+			height:100%;
+
+        }
+
+		td{
+			width:25%;
+			text-align:center;
+			border:none;
+		}
+
+		button{
+			font-size:8pt;
+			width:100%;
+			height:100%;
+			background:#ccddff;
+		}
+		marquee{
+			//font-size:12pt;
+		}
+
+
+    </style>
+
+    <script>
+        function show(str){
+            Android.showToast(str);
+        }
+    </script>
+</head>
+<body>
+<table>
+    <tr ><td><button><b>Health</b></button></td>
+        <td><button><b>Agents</b></button></td>
+        <td><button><b>Automobiles</b></button></td>
+        <td><button><b><a href=foodMain.html>Food</a></b></button></td>
+    </tr>
+    <tr>
+        <td><button><b><a href=shops.html>Shops</a></b></button></td>
+        <td><button><b>Construction</b></button></td>
+        <td><button><b>Daily Needs</b></button></td>
+        <td><button onclick=show("8")><b>Beauty</b></button></td>
+    </tr>
+    <tr>
+        <td><button onclick=show("9")><b>Banks</b></button></td>
+        <td><button onclick=show("10")><b>Emergency</b></button></td>
+        <td><button onclick=show("11")><b>Important</b></button></td>
+        <td><button onclick=show("12")><b>Contact</b></button></td>
+    </tr>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_supermain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="1dp"
+    android:orientation="vertical"
+    android:background="@mipmap/back1"
+    tools:context="harshad.mykarjat.supermain"
+
+    >
+
+    <AutoCompleteTextView
+        android:id="@+id/actv"
+        android:hint="  Search in all sections here. "
+        android:textColorHint="#f5a"
+        android:completionThreshold="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvResultCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:id="@+id/lvmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <WebView
+        android:id="@+id/adWv"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="2dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        />
+
+    <WebView
+        android:id="@+id/mainWv"
+        android:visibility="gone"
+        android:layout_height="308dp"
+        android:layout_width="match_parent"
+        android:layout_weight="0.01" />
+
+    <GridView
+
+        android:numColumns="3"
+        android:layout_weight="1"
+        android:stretchMode="columnWidth"
+        android:id="@+id/gvmain"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+         >
+    </GridView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bnvSupermain"
+        app:menu="@menu/menu_main"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+
+
+    <com.google.android.gms.ads.AdView
+        android:visibility="gone"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/adunitidtest">
+    </com.google.android.gms.ads.AdView>
+
+
+</LinearLayout>

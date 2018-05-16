@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "934029256268",
+    "firebase_url": "https://fbasenotification-e419f.firebaseio.com",
+    "project_id": "fbasenotification-e419f",
+    "storage_bucket": "fbasenotification-e419f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934029256268:android:a6aa104cec6917c9",
+        "android_client_info": {
+          "package_name": "harshad.fbasenotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934029256268-ek9t5vbkbmu8v79265g88rvktrjpt8cd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmIFNhhEH_8cZ02N7MCLia_r94qO63KeY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934029256268:android:b5cc46ca6310e99d",
+        "android_client_info": {
+          "package_name": "harshad.mykarjat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934029256268-ek9t5vbkbmu8v79265g88rvktrjpt8cd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmIFNhhEH_8cZ02N7MCLia_r94qO63KeY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

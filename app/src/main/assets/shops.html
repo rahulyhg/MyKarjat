@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>hello</title>
+
+    <style>
+		a{
+			text-decoration:none;
+		}
+
+        table{
+
+			width:100%;
+			height:100%;
+
+        }
+
+		td{
+			width:25%;
+			text-align:center;
+			border:none;
+		}
+
+		button{
+			font-size:8pt;
+			width:100%;
+			height:100%;
+			background:#ccddff;
+		}
+		marquee{
+			//font-size:12pt;
+		}
+
+
+    </style>
+
+    <script>
+        function show(str){
+            Android.showToast(str);
+        }
+    </script>
+</head>
+<body>
+<table>
+    <tr ><td><button onclick=show("mobile")><b>Mobile</b></button></td>
+        <td><button onclick=show("xerox")><b>Xerox</b></button></td>
+        <td><button onclick=show("mcloth")><b>MenClothes</b></button></td>
+
+    </tr>
+    <tr><td><button onclick=show("fcloth")><b>Women Clothes</b></button></td>
+        <td><button onclick=show("pstudio")><b>Photo Studio</b></button></td>
+        <td><button onclick=show("ccafe")><b>Cyber Cafe</b></button></td>
+
+    </tr>
+    <tr>
+        <td><button onclick=show("footware")><b>Footwares</b></button></td>
+        <td><button onclick=show("hardware")><b>Hardware</b></button></td>
+        <td><button onclick=show("steel")><b>Steel & Utensils</b></button></td>
+
+    </tr>
+
+</table>
+</body>
+</html>

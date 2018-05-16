@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="2dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:paddingTop="2dp"
+    android:orientation="vertical"
+    tools:context="harshad.mykarjat.MainActivity$PlaceholderFragment">
+
+    <AutoCompleteTextView
+        android:id="@+id/atv"
+        android:hint="  Search"
+        android:textColorHint="#faa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <WebView
+        android:id="@+id/wv"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/adunitidtest">
+    </com.google.android.gms.ads.AdView>
+
+    <ListView
+        android:id="@+id/lv"
+
+        android:dividerHeight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+
+</LinearLayout>

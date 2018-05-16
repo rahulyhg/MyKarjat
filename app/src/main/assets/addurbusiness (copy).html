@@ -1,0 +1,68 @@
+<html>
+	
+	<head>
+		<style>
+			body{
+				background:#090;
+				color:white;
+			}
+			
+			.formbuttons{
+				background:white;
+				width:100px;
+				height:40px;
+				border:solid gray 1px;
+				border-radius:10px;
+			}
+			
+			.formfields{
+				background:white;
+				width:150px;
+				height:40px;
+				border:solid gray 1px;
+				border-radius:10px;
+			}
+			.formtextarea{
+				background:white;
+				width:150px;
+				height:70px;
+				border:solid gray 1px;
+				border-radius:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thankyou.html';}">
+		</iframe>
+		
+		<form action="https://docs.google.com/forms/d/e/1FAIpQLSfZ08XET147LMHunxWMkR4CYCfjaXMxLq8XIM4gSZGGssRRyA/formResponse" target="hidden_iframe" onsubmit="submitted=true;" method="POST" >
+			<table>
+				<tr>
+					<td>Business Name</td>
+					<td><input name="entry.524940021" required class="formfields"></td>
+				</tr>
+				<tr>
+					<td>Proprietor/Owner Name</td>
+					<td><input name="entry.1453029178" required class="formfields"></td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td><textarea name="entry.600568386" required class="formtextarea"></textarea></td>
+				</tr>
+				<tr>
+					<td>Contact/Mobile No</td>
+					<td><input required name="entry.256183273" class="formfields"></td>
+				</tr>
+				<tr>
+					<td>Speciality</td>
+					<td><input name="entry.574210939" class="formfields"></td>
+				</tr>
+				
+			</table>
+			<input type=submit class="formbuttons">
+			<input type=reset class="formbuttons">
+		</form>
+		</center>
+	</body>
+</html>

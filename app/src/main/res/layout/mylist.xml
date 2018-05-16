@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:focusable="false"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:id="@+id/mylistname"
+        android:textSize="20sp"
+        android:gravity="left"
+        android:focusable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/mylistadd"
+        android:textSize="20sp"
+        android:focusable="false"
+        android:layout_below="@+id/mylistname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/mylistmobile"
+        android:layout_below="@+id/mylistadd"
+        android:layout_alignParentLeft="true"
+        android:textSize="18sp"
+        android:background="#eee"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_below="@+id/mylistadd"
+        android:layout_alignParentRight="true"
+        android:text="Share"
+        android:background="#ddd"
+        android:textSize="15sp"
+        android:focusable="false"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+
+
+</RelativeLayout>
+

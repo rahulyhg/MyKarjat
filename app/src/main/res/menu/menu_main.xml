@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="harshad.mykarjat.MainActivity">
+    <item
+        android:id="@+id/menuHome"
+        android:title="Home"
+        android:icon="@mipmap/home"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menuRegisterbusiness"
+        android:icon="@mipmap/register2"
+        android:title="Register"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/menuChat"
+        android:title="Chat"
+        android:icon="@mipmap/chat"
+        app:showAsAction="always"/>
+
+
+</menu>

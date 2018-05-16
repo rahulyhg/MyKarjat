@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">My Karjat</string>
+    <string name="appnextid">ead24424-9f2b-4467-9735-489d0d77c76c</string>  <!-- this is appnext original id -->
+    <string name="adunitid">ca-app-pub-4170269433133188/8937588692</string>  <!-- this is original id -->
+    <string name="adunitidtest">ca-app-pub-3940256099942544/6300978111</string><!--replace this one for test n real -->
+    <string name="adunittestidcopy">ca-app-pub-3940256099942544/6300978111</string>  <!-- test id reserve copy -->
+
+    <string name="admobappid">ca-app-pub-4170269433133188~7483411963</string>  <!-- original one-->
+    <string name="admobapptestid">ca-app-pub-3940256099942544~3347511713</string>  <!-- testing one-->
+    <string name="admobapptestidcopy">ca-app-pub-3940256099942544~3347511713</string>  <!-- testing one copy-->
+
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="tvscroll">Touch contact number to dial. For advertising, enlisting your service or contact update, kindly contact 9595031739 / 8956107979</string>
+    <string-array name="imgmain">
+        <item>@drawable/health1</item>
+        <item>@drawable/agent1</item>
+        <item>@drawable/bustrain</item>
+        <item>@drawable/food</item>
+        <item>@drawable/shop3</item>
+        <item>@drawable/construction1</item>
+        <item>@drawable/dneeds</item>
+        <item>@drawable/beauty</item>
+        <item>@drawable/bank</item>
+        <item>@drawable/emergency</item>
+        <item>@drawable/important</item>
+        <item>@drawable/classes</item>
+        <item>@drawable/travel</item>
+        <item>@drawable/contact</item>
+        <item>@drawable/registerurbusiness</item>
+    </string-array>
+
+    <string-array name="health">
+        <item>@drawable/doctor1</item>
+        <item>@drawable/chemist</item>
+        <item>@drawable/pathology</item>
+        <item>@drawable/bloodbank</item>
+
+    </string-array>
+
+    <string-array name="food">
+        <item>@drawable/snack</item>
+        <item>@drawable/juice</item>
+        <item>@drawable/hotel</item>
+        <item>@drawable/bakery</item>
+        <item>@drawable/cake</item>
+        <item>@drawable/icecream</item>
+        <item>@drawable/cafe</item>
+        <item>@drawable/sweetmart</item>
+        <item>@drawable/khanaval</item>
+        <item>@drawable/catering</item>
+        <item>@drawable/dairy</item>
+    </string-array>
+
+
+    <string-array name="shop">
+        <item>@drawable/mobile</item>
+        <item>@drawable/xerox</item>
+        <item>@drawable/menclothes</item>
+        <item>@drawable/womencloth</item>
+        <item>@drawable/photostudio</item>
+        <item>@drawable/cybercafe</item>
+        <item>@drawable/footwear</item>
+        <item>@drawable/hardware</item>
+        <item>@drawable/steel</item>
+    </string-array>
+
+    <string-array name="construction">
+        <item>@drawable/buildingmaterial</item>
+        <item>@drawable/flooring</item>
+        <item>@drawable/steelconstruction</item>
+        <item>@drawable/marble</item>
+        <item>@drawable/polish</item>
+        <item>@drawable/wallpaper</item>
+    </string-array>
+
+    <string-array name="beauty">
+        <item>@drawable/parlor</item>
+        <item>@drawable/saloon</item>
+        <item>@drawable/ladiestailor</item>
+        <item>@drawable/gentstailor</item>
+    </string-array>
+
+    <string-array name="dneeds">
+        <item>@drawable/supermarket</item>
+        <item>@drawable/kirana</item>
+        <item>@drawable/vegetables</item>
+        <item>@drawable/cable</item>
+    </string-array>
+
+    <string-array name="agents">
+        <item>@drawable/restate1</item>
+        <item>@drawable/license</item>
+        <item>@drawable/pancard</item>
+        <item>@drawable/aadharcard</item>
+        <item>@drawable/tourtravel</item>
+        <item>@drawable/stamp</item>
+        <item>@drawable/lic</item>
+        <item>@drawable/tax</item>
+    </string-array>
+
+    <string-array name="doctor">
+        <item>@drawable/gynaec</item>
+        <item>@drawable/dentist</item>
+        <item>@drawable/ortho</item>
+        <item>@drawable/pediatrics</item>
+        <item>@drawable/cardiologist</item>
+        <item>@drawable/homeopathy</item>
+        <item>@drawable/ayurvedic</item>
+        <item>@drawable/ent</item>
+        <item>@drawable/dermatologist</item>
+    </string-array>
+</resources>
