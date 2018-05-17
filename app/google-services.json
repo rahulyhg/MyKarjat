@@ -8,6 +8,81 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:934029256268:android:87fcb66cc6ca320a",
+        "android_client_info": {
+          "package_name": "com.google.firebase.quickstart.auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934029256268-kppkpas112rjphlkkginuq40ugb7qk7f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.quickstart.auth",
+            "certificate_hash": "610ebd5a1297490e2db5658ba01ba56dad1e4703"
+          }
+        },
+        {
+          "client_id": "934029256268-ek9t5vbkbmu8v79265g88rvktrjpt8cd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmIFNhhEH_8cZ02N7MCLia_r94qO63KeY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934029256268-ek9t5vbkbmu8v79265g88rvktrjpt8cd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934029256268:android:5920de3503a2d18c",
+        "android_client_info": {
+          "package_name": "com.google.firebase.quickstart.fcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934029256268-ek9t5vbkbmu8v79265g88rvktrjpt8cd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmIFNhhEH_8cZ02N7MCLia_r94qO63KeY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:934029256268:android:a6aa104cec6917c9",
         "android_client_info": {
           "package_name": "harshad.fbasenotification"
@@ -46,6 +121,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "934029256268-mm6upb4p1fn5ilii19urhakmtet733kt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "harshad.mykarjat",
+            "certificate_hash": "610ebd5a1297490e2db5658ba01ba56dad1e4703"
+          }
+        },
+        {
           "client_id": "934029256268-ek9t5vbkbmu8v79265g88rvktrjpt8cd.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -60,8 +143,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934029256268-ek9t5vbkbmu8v79265g88rvktrjpt8cd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
