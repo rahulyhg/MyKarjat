@@ -9,7 +9,7 @@ public class fbase {
     private String name,shopname,address,speciality,phone,bstype,lat,lon,email;
     private String update;
     private String date;
-    private String chat;
+    private String chatmsg,chatusername,chattime;
     private String username,password;
     private String keywords;
 
@@ -25,6 +25,23 @@ public class fbase {
         this.=;
     }
     */
+
+
+    public String getChattime(){
+        return chattime;
+    }
+
+    public void setChattime(String chattime){
+        this.chattime=chattime;
+    }
+
+    public String getChatusername(){
+        return chatusername;
+    }
+
+    public void setChatusername(String chatusername){
+        this.chatusername=chatusername;
+    }
 
     public String getKeywords(){
         return keywords;
@@ -49,12 +66,12 @@ public class fbase {
     public void setUsername(String username){
         this.username=username;
     }
-    public String getChat(){
-        return chat;
+    public String getChatmsg(){
+        return chatmsg;
     }
 
-    public void setChat(String chat){
-        this.chat=chat;
+    public void setChatmsg(String chatmsg){
+        this.chatmsg=chatmsg;
     }
 
     public String getDate(){
