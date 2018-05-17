@@ -3,10 +3,12 @@ package harshad.mykarjat;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.CountDownTimer;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -15,6 +17,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.QuickContactBadge;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,6 +55,7 @@ public class registerBusiness extends AppCompatActivity {
     int i=0;
     int flag=0;
 
+    ScrollView svRegBusiness;
 
 
     @Override
@@ -64,6 +68,8 @@ public class registerBusiness extends AppCompatActivity {
         dbRef = FirebaseDatabase.getInstance().getReference();
 
         Log.d("rgbus",""+submitEdit+" "+page);
+
+        svRegBusiness=findViewById(R.id.svRegBusiness);
 
         btnRBLogin=findViewById(R.id.btnRBLogin);
         btnRBSignup=findViewById(R.id.btnRBSignup);
@@ -84,6 +90,28 @@ public class registerBusiness extends AppCompatActivity {
 
         btnRBLLogin=findViewById(R.id.btnRBLLogin);
         btnSubmit=(Button) findViewById(R.id.btnSubmit);
+
+        etRBKeywords.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+             //   svRegBusiness.fullScroll(View.FOCUS_DOWN);
+                new CountDownTimer(500,100){
+
+                    @Override
+                    public void onTick(long millisUntilFinished) {
+
+                    }
+
+                    @Override
+                    public void onFinish() {
+//                        Toast.makeText(ChatActivity.this, "test", Toast.LENGTH_SHORT).show();
+                        svRegBusiness.fullScroll(View.FOCUS_DOWN);
+                    }
+                }.start();
+                return false;
+            }
+
+        });
 
         ConnectivityManager conn=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo nf=conn.getActiveNetworkInfo();

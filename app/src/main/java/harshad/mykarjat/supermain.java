@@ -529,7 +529,7 @@ public class supermain extends AppCompatActivity{
             {"Tanush Saree Center","Mr. Avinash Shirke / Mr. Deepak Pawar","Vaidya Sankul, Shop No.3, Mahair Peth, Karjat-Raigad 410201","971890171"},
             {"New Fashion Collection","Mr. Vrushali Shinde","Mahavir Peth Near Paras Cloth,Karjat-Raigad 410201 ","9921603903"},
             {"Paras Cloth Store"," Mr. Prakash / Mr Manoj / Mr. Amit","Mahavir Peth, Karjat-Raigad 410201","9422339800 / 9921888111 / 9921711711"},
-            {"Pankaj Cloth Stores","Mr. Pankaj Jain / Mr. Vikram jain","Mahair Peth, Karjat-Raigad 410202","9423375948 / 94232352479423375948 / 9423235247"},
+            {"Pankaj Cloth Stores","Mr. Pankaj Jain / Mr. Vikram jain","Mahair Peth, Karjat-Raigad 410202","9423375948 /  9423235247"},
             {"Memsaab Collection"," Mr. Dhanji","Mahair Peth, Station Road, Opp. State Bank, Karjat-Raigad 410201","8898727751"},
             {"DeepSangam Collection","Mr. Jayesh Mate / Mr. Lalit","Mahair Peth, Karjat-Raigad 410201","7875821530 / 9225711355"},
             {"Panchratana Saree Center"," Mr. Sajan / Mr. Yogesh","Mahavir Peth, Karjat-Raigad 410201","9421981666 / 9423377999"},

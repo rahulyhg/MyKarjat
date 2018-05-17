@@ -250,23 +250,26 @@ public class ChatActivity extends AppCompatActivity {
                     ViewGroup.LayoutParams params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
                     LinearLayout.LayoutParams p=new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                    p.setMargins(0,40,0,0);
+                    p.setMargins(0,20,0,0);
 
                     LinearLayout ll=new LinearLayout(ChatActivity.this);
                     ll.setOrientation(LinearLayout.VERTICAL);
                     ll.setLayoutParams(p);
+                    ll.setPadding(5,5,5,5);
+                    ll.setBackgroundResource(R.drawable.cardborder);
 
                     TextView tvUsername=new TextView(ChatActivity.this);
                     tvUsername.setText(fb.getChatusername());
 
                     tvUsername.setTextSize(13);
-                    tvUsername.setTextColor(Color.rgb(0,175,0));
+                    tvUsername.setTextColor(Color.rgb(0,150,0));
                     tvUsername.setLayoutParams(params);
                     Log.d("chatact",fb.getChatusername());
 
                     TextView tvChatMsg=new TextView(ChatActivity.this);
                     tvChatMsg.setText(fb.getChatmsg());
-                    tvChatMsg.setTextSize(18);
+                    tvChatMsg.setTextSize(15);
+                    tvChatMsg.setTextColor(Color.BLACK);
                     tvChatMsg.setLayoutParams(params);
                     Log.d("chatact",fb.getChatmsg());
 
@@ -274,6 +277,7 @@ public class ChatActivity extends AppCompatActivity {
                     tvChatTime.setText(fb.getChattime());
                     tvChatTime.setTextSize(11);
                     tvChatTime.setLayoutParams(params);
+                    tvChatTime.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_END);
 //                    Log.d("chatact",fb.getChattime());
 
                     ll.addView(tvUsername);
@@ -306,17 +310,27 @@ public class ChatActivity extends AppCompatActivity {
                     //adding views 17may18
                     ViewGroup.LayoutParams params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
+                    LinearLayout.LayoutParams p=new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                    p.setMargins(0,20,0,0);
+
+                    LinearLayout ll=new LinearLayout(ChatActivity.this);
+                    ll.setOrientation(LinearLayout.VERTICAL);
+                    ll.setLayoutParams(p);
+                    ll.setPadding(5,5,5,5);
+                    ll.setBackgroundResource(R.drawable.cardborder);
+
                     TextView tvUsername=new TextView(ChatActivity.this);
                     tvUsername.setText(fb.getChatusername());
 
                     tvUsername.setTextSize(13);
-                    tvUsername.setTextColor(Color.rgb(0,175,0));
+                    tvUsername.setTextColor(Color.rgb(0,150,0));
                     tvUsername.setLayoutParams(params);
                     Log.d("chatact",fb.getChatusername());
 
                     TextView tvChatMsg=new TextView(ChatActivity.this);
                     tvChatMsg.setText(fb.getChatmsg());
-                    tvChatMsg.setTextSize(18);
+                    tvChatMsg.setTextSize(15);
+                    tvChatMsg.setTextColor(Color.BLACK);
                     tvChatMsg.setLayoutParams(params);
                     Log.d("chatact",fb.getChatmsg());
 
@@ -324,11 +338,14 @@ public class ChatActivity extends AppCompatActivity {
                     tvChatTime.setText(fb.getChattime());
                     tvChatTime.setTextSize(11);
                     tvChatTime.setLayoutParams(params);
+                    tvChatTime.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_END);
 //                    Log.d("chatact",fb.getChattime());
 
-                    llInsideScrollview.addView(tvUsername);
-                    llInsideScrollview.addView(tvChatMsg);
-                    llInsideScrollview.addView(tvChatTime);
+                    ll.addView(tvUsername);
+                    ll.addView(tvChatMsg);
+                    ll.addView(tvChatTime);
+
+                    llInsideScrollview.addView(ll);
 
                 }
                 svChat.fullScroll(View.FOCUS_DOWN);

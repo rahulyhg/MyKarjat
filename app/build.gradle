@@ -5,7 +5,7 @@ android {
     buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "harshad.mykarjat"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 26
         versionCode 3
         versionName "3.0"
