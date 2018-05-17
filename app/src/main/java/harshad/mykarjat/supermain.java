@@ -1204,7 +1204,8 @@ public class supermain extends AppCompatActivity{
                     break;
 
                     case R.id.menuChat: {
-                        startActivity(new Intent(supermain.this, ChatActivity.class));
+//                        startActivity(new Intent(supermain.this, ChatActivity.class));
+                        startActivity(new Intent(supermain.this, GoogleSignInActivity.class));
                     }
                     break;
                 }
