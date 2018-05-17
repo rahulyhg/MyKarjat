@@ -22,6 +22,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -55,6 +56,7 @@ public class GoogleSignInActivity extends BaseActivity implements
     private GoogleSignInClient mGoogleSignInClient;
     private TextView mStatusTextView;
     private TextView mDetailTextView;
+    private Button btnMailId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,11 +66,13 @@ public class GoogleSignInActivity extends BaseActivity implements
         // Views
         mStatusTextView = findViewById(R.id.status);
         mDetailTextView = findViewById(R.id.detail);
+        btnMailId=findViewById(R.id.btnMailId);
 
         // Button listeners
         findViewById(R.id.sign_in_button).setOnClickListener(this);
         findViewById(R.id.sign_out_button).setOnClickListener(this);
         findViewById(R.id.disconnect_button).setOnClickListener(this);
+
 
         // [START config_signin]
         // Configure Google Sign In
@@ -189,17 +193,21 @@ public class GoogleSignInActivity extends BaseActivity implements
         hideProgressDialog();
         if (user != null) {
             mStatusTextView.setText(getString(R.string.google_status_fmt, user.getEmail()));
-            mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()+"\n"+user.getDisplayName()+"\n"+
-            user.getPhoneNumber()));
-
+//            mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()+"\n"+user.getDisplayName()+"\n"+
+//            user.getPhoneNumber()));
+            mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getDisplayName()));
+            getSupportActionBar().setTitle("Signed in as : "+user.getDisplayName());
+            btnMailId.setText(user.getEmail());
             findViewById(R.id.sign_in_button).setVisibility(View.GONE);
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE);
+            findViewById(R.id.llChat).setVisibility(View.VISIBLE);
         } else {
             mStatusTextView.setText(R.string.signed_out);
             mDetailTextView.setText(null);
 
             findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.GONE);
+            findViewById(R.id.llChat).setVisibility(View.GONE);
         }
     }
 
