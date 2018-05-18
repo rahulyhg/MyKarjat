@@ -28,6 +28,7 @@
 
     <LinearLayout
         android:visibility="visible"
+        android:background="@drawable/cardborder"
         android:id="@+id/llRBLoginSignup"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -35,17 +36,23 @@
         android:layout_height="200dp">
 
         <Button
+            android:layout_margin="2dp"
             android:gravity="center"
-            android:text="Login"
+            android:text="Sign In"
             android:textSize="18dp"
             android:layout_weight="1"
+            android:background="@color/fui_bgTwitter"
+            android:textColor="#fff"
             android:id="@+id/btnRBLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
+            android:layout_margin="2dp"
             android:textSize="18dp"
             android:gravity="center"
-            android:text="Signup"
+            android:text="Sign Up"
+            android:background="@color/fui_bgTwitter"
+            android:textColor="#fff"
             android:layout_weight="1"
             android:id="@+id/btnRBSignup"
             android:layout_width="match_parent"
@@ -57,13 +64,27 @@
         android:orientation="vertical"
         android:id="@+id/llRBLogin"
         android:padding="2dp"
+        android:background="@drawable/cardborder"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:textColor="#000"
+            android:text="Username"
+            android:paddingLeft="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
         <EditText
             android:id="@+id/etRBLUsername"
             android:hint="Username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="#000"
+            android:text="Password"
+            android:paddingLeft="2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <EditText
@@ -75,6 +96,9 @@
         <Button
             android:id="@+id/btnRBLLogin"
             android:text="Login"
+            android:layout_margin="2dp"
+            android:textColor="#fff"
+            android:background="#f55"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -87,25 +111,44 @@
         android:layout_height="match_parent">
         <ScrollView
             android:id="@+id/svRegBusiness"
-            android:paddingBottom="35dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
-
-                android:padding="2dp"
+                android:paddingBottom="45dp"
+                android:layout_marginBottom="2dp"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#000"
+                    android:text="Username"
+                    android:paddingLeft="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
                 <EditText
                     android:id="@+id/etRBUsername"
                     android:hint="Username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="#000"
+                    android:text="Password"
+                    android:paddingLeft="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
                 <EditText
                     android:id="@+id/etRBPassword"
                     android:hint="Password"
                     android:inputType="textVisiblePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="#000"
+                    android:text="Shop Name/Business Name"
+                    android:paddingLeft="2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <EditText
@@ -115,14 +158,34 @@
                     android:layout_height="wrap_content" />
 
 
+                <TextView
+                    android:textColor="#000"
+                    android:text="Owner Name"
+                    android:paddingLeft="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
                 <EditText
                     android:id="@+id/etOName"
                     android:hint="Owner Name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="#000"
+                    android:text="Address"
+                    android:paddingLeft="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
                 <EditText
                     android:id="@+id/etAddress"
                     android:hint="Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="#000"
+                    android:text="Contact"
+                    android:paddingLeft="2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <EditText
@@ -131,6 +194,13 @@
                     android:inputType="phone"
                     android:maxLength="13"
                     android:hint="Mobile/Contact Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="#000"
+                    android:text="Keywords"
+                    android:paddingLeft="2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <EditText
@@ -145,6 +215,9 @@
         <Button
             android:id="@+id/btnSubmit"
             android:text="Submit"
+            android:layout_margin="2dp"
+            android:textColor="#fff"
+            android:background="#050"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
