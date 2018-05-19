@@ -12,6 +12,7 @@ public class fbase {
     private String chatmsg,chatusername,chattime;
     private String username,password;
     private String keywords;
+    private String status, url;
 
     public fbase(){
     }
@@ -25,6 +26,22 @@ public class fbase {
         this.=;
     }
     */
+
+    public String getStatus(){
+        return status;
+    }
+
+    public void setStatus(String status){
+        this.status=status;
+    }
+
+    public String getUrl(){
+        return url;
+    }
+
+    public void setUrl(String url){
+        this.url=url;
+    }
 
 
     public String getChattime(){

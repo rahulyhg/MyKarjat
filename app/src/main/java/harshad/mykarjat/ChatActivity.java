@@ -98,6 +98,10 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
+        Firebase.setAndroidContext(this);
+        firebase=new Firebase(dburl);
+        dbRef= FirebaseDatabase.getInstance().getReference();
+
         wvChat=(WebView)findViewById(R.id.wvChat);
         wvChat.setWebViewClient(new WebViewClient());
         wvChat.getSettings().setJavaScriptEnabled(true);
@@ -111,7 +115,23 @@ public class ChatActivity extends AppCompatActivity {
 
         //check internet connection here
         if(nf!=null && nf.isConnected()){
-            wvChat.loadUrl("https://wwwkarjatonlinecom.000webhostapp.com/adchat.html");
+            Query adChatStatus=dbRef.child("Advertisements").child("adChat");
+            adChatStatus.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    fbase fb=dataSnapshot.getValue(fbase.class);
+                    if(fb.getStatus().equals("yes")) {
+                        wvChat.loadUrl(fb.getUrl());
+                    }
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+            //wvChat.loadUrl("https://wwwkarjatonlinecom.000webhostapp.com/adchat.html");
         }
         else {
             Snackbar sb=Snackbar.make(this.findViewById(R.id.activity_chat),"Internet not available !",Snackbar.LENGTH_SHORT);
@@ -173,9 +193,7 @@ public class ChatActivity extends AppCompatActivity {
        // ed=share.edit();
        // ed.putString(Prefs.name,"Harshad").apply();
 
-        Firebase.setAndroidContext(this);
-        firebase=new Firebase(dburl);
-        dbRef= FirebaseDatabase.getInstance().getReference();
+
 
 //        tvChat=(TextView)findViewById(R.id.tvChat);
 

@@ -788,6 +788,8 @@ public class supermain extends AppCompatActivity{
     SharedPreferences share;
     SharedPreferences.Editor ed;
 
+    String url="";
+
 
     public static void ifnet(){
         act.finish();
@@ -907,7 +909,25 @@ public class supermain extends AppCompatActivity{
         if(nf!=null && nf.isConnected()){
             //dbHelper db=new dbHelper(supermain.this);
 
-            adWv.loadUrl("https://wwwkarjatonlinecom.000webhostapp.com/adhome.html");
+            Query adHomeStatus=dbRef.child("Advertisements").child("adHome");
+            adHomeStatus.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    fbase fb=dataSnapshot.getValue(fbase.class);
+                    if(fb.getStatus().equals("yes")) {
+                        adWv.loadUrl(fb.getUrl());
+//                        adWv.reload();
+                    }
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+
+            //adWv.loadUrl("https://wwwkarjatonlinecom.000webhostapp.com/adhome.html");
 
             Log.d("logcon",nf.getExtraInfo()+" extra\n"+nf.getReason()+" reason\n" +
                     nf.getSubtypeName()+" subtype\n"+nf.getTypeName()+" type\n"+nf.getState()+" state\n"+nf.isConnected()+" connected");
@@ -917,10 +937,12 @@ public class supermain extends AppCompatActivity{
 
 
 
-            fbase fb=new fbase();
+
             //add all strsearch to firebase database
             //comment before running firebase download database query
-  /*       for(int x=0;x<strSearch.length;x++) {
+  /*
+                   fbase fb=new fbase();
+                   for(int x=0;x<strSearch.length;x++) {
                 if(strSearch[x].length==2){
                     fb.setShopname(strSearch[x][0]);
                     fb.setName("Not available");

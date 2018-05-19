@@ -126,7 +126,23 @@ public class registerBusiness extends AppCompatActivity {
         NetworkInfo nf=conn.getActiveNetworkInfo();
 
         if(nf!=null && nf.isConnected()){
-            wvregBusiness.loadUrl("https://wwwkarjatonlinecom.000webhostapp.com/adregisterbusiness.html");
+            Query adRegBusStatus=dbRef.child("Advertisements").child("adRegBus");
+            adRegBusStatus.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    fbase fb=dataSnapshot.getValue(fbase.class);
+                    if(fb.getStatus().equals("yes")) {
+                        wvregBusiness.loadUrl(fb.getUrl());
+                    }
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+//            wvregBusiness.loadUrl("https://wwwkarjatonlinecom.000webhostapp.com/adregisterbusiness.html");
         }
         else {
             Snackbar sb=Snackbar.make(this.findViewById(R.id.activity_register_business),"Internet not available !",Snackbar.LENGTH_SHORT);
