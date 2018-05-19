@@ -69,6 +69,15 @@ public class registerBusiness extends AppCompatActivity {
 
         Log.d("rgbus",""+submitEdit+" "+page);
 
+
+        wvregBusiness=(WebView)findViewById(R.id.wvregisterbusiness);
+        wvregBusiness.setWebViewClient(new WebViewClient());
+        wvregBusiness.getSettings().setJavaScriptEnabled(true);
+
+        wvregBusiness.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+        wvregBusiness.getSettings().setDomStorageEnabled(true);
+        // wvregBusiness.loadUrl("https://docs.google.com/forms/d/e/1FAIpQLSfZ08XET147LMHunxWMkR4CYCfjaXMxLq8XIM4gSZGGssRRyA/viewform");
+
         svRegBusiness=findViewById(R.id.svRegBusiness);
 
         btnRBLogin=findViewById(R.id.btnRBLogin);
@@ -117,12 +126,14 @@ public class registerBusiness extends AppCompatActivity {
         NetworkInfo nf=conn.getActiveNetworkInfo();
 
         if(nf!=null && nf.isConnected()){
+            wvregBusiness.loadUrl("https://wwwkarjatonlinecom.000webhostapp.com/adregisterbusiness.html");
         }
         else {
             Snackbar sb=Snackbar.make(this.findViewById(R.id.activity_register_business),"Internet not available !",Snackbar.LENGTH_SHORT);
             sb.show();
             btnRBLogin.setEnabled(false);
             btnRBSignup.setEnabled(false);
+            wvregBusiness.loadUrl("file:///android_asset/ad.html");
         }
 
 
@@ -348,14 +359,6 @@ public class registerBusiness extends AppCompatActivity {
             }
         });
 
-        wvregBusiness=(WebView)findViewById(R.id.wvregisterbusiness);
-        wvregBusiness.setWebViewClient(new WebViewClient());
-        wvregBusiness.getSettings().setJavaScriptEnabled(true);
-
-        wvregBusiness.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
-        wvregBusiness.getSettings().setDomStorageEnabled(true);
-        wvregBusiness.loadUrl("file:///android_asset/addurbusiness.html");
-       // wvregBusiness.loadUrl("https://docs.google.com/forms/d/e/1FAIpQLSfZ08XET147LMHunxWMkR4CYCfjaXMxLq8XIM4gSZGGssRRyA/viewform");
     }
 
     @Override

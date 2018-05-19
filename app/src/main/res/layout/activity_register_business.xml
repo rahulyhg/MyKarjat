@@ -9,7 +9,7 @@
     tools:context="harshad.mykarjat.registerBusiness">
 
     <com.google.android.gms.ads.AdView
-
+        android:visibility="gone"
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
         android:layout_width="match_parent"
@@ -21,19 +21,22 @@
     </com.google.android.gms.ads.AdView>
 
     <WebView
-        android:visibility="gone"
+        android:layout_margin="2dp"
+        android:visibility="visible"
+        android:layout_weight="3"
         android:id="@+id/wvregisterbusiness"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="0dp"/>
 
     <LinearLayout
         android:visibility="visible"
+        android:layout_weight="1"
         android:background="@drawable/cardborder"
         android:id="@+id/llRBLoginSignup"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:padding="2dp"
-        android:layout_height="200dp">
+        android:layout_height="0dp">
 
         <Button
             android:layout_margin="2dp"
@@ -224,6 +227,7 @@
     </RelativeLayout>
 
     <com.google.android.gms.ads.AdView
+        android:visibility="gone"
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView1"
         android:layout_width="match_parent"

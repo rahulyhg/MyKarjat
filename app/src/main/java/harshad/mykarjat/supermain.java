@@ -852,7 +852,7 @@ public class supermain extends AppCompatActivity{
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         Log.d("Tag",""+mInterstitialAd.isLoaded());*/
         adWv = (WebView) findViewById(R.id.adWv);
-        adWv.loadUrl("file:///android_asset/ad.html");
+
         ll = (LinearLayout) findViewById(R.id.activity_supermain);
 
         lvmain=(ListView)findViewById(R.id.lvmain);
@@ -907,6 +907,7 @@ public class supermain extends AppCompatActivity{
         if(nf!=null && nf.isConnected()){
             //dbHelper db=new dbHelper(supermain.this);
 
+            adWv.loadUrl("https://wwwkarjatonlinecom.000webhostapp.com/adhome.html");
 
             Log.d("logcon",nf.getExtraInfo()+" extra\n"+nf.getReason()+" reason\n" +
                     nf.getSubtypeName()+" subtype\n"+nf.getTypeName()+" type\n"+nf.getState()+" state\n"+nf.isConnected()+" connected");
@@ -1039,6 +1040,8 @@ public class supermain extends AppCompatActivity{
 
         }
         else {
+
+            adWv.loadUrl("file:///android_asset/ad.html");
 
             Snackbar sb=Snackbar.make(this.findViewById(R.id.activity_supermain),"Internet not available. Offline Mode !",Snackbar.LENGTH_SHORT);
             sb.show();
