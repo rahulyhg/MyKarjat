@@ -67,10 +67,11 @@
         android:orientation="vertical"
         android:id="@+id/llRBLogin"
         android:padding="2dp"
+        android:layout_weight="1"
         android:background="@drawable/cardborder"
         android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp">
 
         <TextView
             android:textColor="#000"
