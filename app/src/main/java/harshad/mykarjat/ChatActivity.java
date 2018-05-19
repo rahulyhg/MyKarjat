@@ -109,6 +109,21 @@ public class ChatActivity extends AppCompatActivity {
         wvChat.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         wvChat.getSettings().setDomStorageEnabled(true);
 
+        share=getSharedPreferences(Prefs.StoreKey,Context.MODE_PRIVATE);
+        // Toast.makeText(this, share.getString(Prefs.name,"no"), Toast.LENGTH_SHORT).show();
+        // ed=share.edit();
+        // ed.putString(Prefs.name,"Harshad").apply();
+
+
+
+//        tvChat=(TextView)findViewById(R.id.tvChat);
+
+        llInsideScrollview=findViewById(R.id.llInsideScrollview);
+        btnSendChat= (Button)findViewById(R.id.btnSendChat);
+        etChat=(EditText)findViewById(R.id.etChat);
+
+        svChat=(ScrollView)findViewById(R.id.svChat);
+
         ConnectivityManager conn=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo nf=conn.getActiveNetworkInfo();
 //        Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
@@ -188,20 +203,7 @@ public class ChatActivity extends AppCompatActivity {
         //auth code end
 
 
-        share=getSharedPreferences(Prefs.StoreKey,Context.MODE_PRIVATE);
-       // Toast.makeText(this, share.getString(Prefs.name,"no"), Toast.LENGTH_SHORT).show();
-       // ed=share.edit();
-       // ed.putString(Prefs.name,"Harshad").apply();
 
-
-
-//        tvChat=(TextView)findViewById(R.id.tvChat);
-
-        llInsideScrollview=findViewById(R.id.llInsideScrollview);
-        btnSendChat= (Button)findViewById(R.id.btnSendChat);
-        etChat=(EditText)findViewById(R.id.etChat);
-
-        svChat=(ScrollView)findViewById(R.id.svChat);
 
         calendar=Calendar.getInstance();
 
