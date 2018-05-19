@@ -15,7 +15,7 @@ import com.google.android.gms.ads.MobileAds;
 
 public class Contact extends AppCompatActivity {
     TextView tvAdvertise;
-    Button btnCall1,btnCall2;
+    Button btnCall1,btnCall2,btnWhatsapp,btnMail;
     private AdView mAdView,mAdView1;
     private InterstitialAd mInterstitialAd;
 
@@ -36,6 +36,8 @@ public class Contact extends AppCompatActivity {
         tvAdvertise=(TextView)findViewById(R.id.tvAdvertise);
         btnCall1=(Button)findViewById(R.id.btnCall1);
         btnCall2=(Button)findViewById(R.id.btnCall2);
+        btnMail=findViewById(R.id.btnMail);
+        btnWhatsapp=findViewById(R.id.btnWhatsapp);
 
         btnCall1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +54,32 @@ public class Contact extends AppCompatActivity {
                 Intent i=new Intent(Intent.ACTION_DIAL);
                 i.setData(Uri.parse("tel:8956107979"));
                 startActivity(i);
+            }
+        });
+
+        btnMail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(Intent.ACTION_SENDTO);
+                i.setData(Uri.parse("mailto:onlinekarjat@gmail.com"));
+                startActivity(i);
+            }
+        });
+
+        btnWhatsapp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String toNumber = "+91 9595031739"; // contains spaces.
+                toNumber = toNumber.replace("+", "").replace(" ", "");
+
+                Intent sendIntent = new Intent("android.intent.action.MAIN");
+                sendIntent.putExtra("jid", toNumber + "@s.whatsapp.net");
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "I wish to\n\nThanks !");
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.setPackage("com.whatsapp");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+
             }
         });
     }
