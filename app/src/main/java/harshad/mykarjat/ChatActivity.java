@@ -15,6 +15,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -86,6 +88,8 @@ public class ChatActivity extends AppCompatActivity {
     SharedPreferences.Editor ed;
     LinearLayout llInsideScrollview;
 
+    WebView wvChat;
+
 
 
 
@@ -93,6 +97,29 @@ public class ChatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+
+        wvChat=(WebView)findViewById(R.id.wvChat);
+        wvChat.setWebViewClient(new WebViewClient());
+        wvChat.getSettings().setJavaScriptEnabled(true);
+
+        wvChat.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+        wvChat.getSettings().setDomStorageEnabled(true);
+
+        ConnectivityManager conn=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo nf=conn.getActiveNetworkInfo();
+//        Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+
+        //check internet connection here
+        if(nf!=null && nf.isConnected()){
+            wvChat.loadUrl("https://wwwkarjatonlinecom.000webhostapp.com/adchat.html");
+        }
+        else {
+            Snackbar sb=Snackbar.make(this.findViewById(R.id.activity_chat),"Internet not available !",Snackbar.LENGTH_SHORT);
+            sb.show();
+            btnSendChat.setEnabled(false);
+            etChat.setEnabled(false);
+            wvChat.loadUrl("file:///android_asset/ad.html");
+        }
 
         //auth code start
         // Views
@@ -161,19 +188,6 @@ public class ChatActivity extends AppCompatActivity {
         calendar=Calendar.getInstance();
 
 
-        ConnectivityManager conn=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo nf=conn.getActiveNetworkInfo();
-//        Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
-
-        //check internet connection here
-        if(nf!=null && nf.isConnected()){
-        }
-        else {
-            Snackbar sb=Snackbar.make(this.findViewById(R.id.activity_chat),"Internet not available !",Snackbar.LENGTH_SHORT);
-            sb.show();
-            btnSendChat.setEnabled(false);
-            etChat.setEnabled(false);
-        }
 
         switch(calendar.get(Calendar.MONTH)){
             case 0:
@@ -528,6 +542,7 @@ public class ChatActivity extends AppCompatActivity {
             findViewById(R.id.sign_in_button).setVisibility(View.GONE);
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE);
             findViewById(R.id.llChat).setVisibility(View.VISIBLE);
+            wvChat.setVisibility(View.GONE);
         } else {
             mStatusTextView.setText(R.string.signed_out);
             mDetailTextView.setText(null);
@@ -536,6 +551,7 @@ public class ChatActivity extends AppCompatActivity {
             findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.GONE);
             findViewById(R.id.llChat).setVisibility(View.GONE);
+            wvChat.setVisibility(View.VISIBLE);
         }
     }
 
