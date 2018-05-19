@@ -13,6 +13,7 @@ public class fbase {
     private String username,password;
     private String keywords;
     private String status, url;
+    private String type,subtype;
 
     public fbase(){
     }
@@ -27,6 +28,21 @@ public class fbase {
     }
     */
 
+    public String getType(){
+        return type;
+    }
+
+    public void setType(String type){
+        this.type=type;
+    }
+
+    public String getSubtype(){
+        return subtype;
+    }
+
+    public void setSubtype(String subtype){
+        this.subtype=subtype;
+    }
     public String getStatus(){
         return status;
     }
