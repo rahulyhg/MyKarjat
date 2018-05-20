@@ -1255,7 +1255,7 @@ public class supermain extends AppCompatActivity{
         else
             super.onBackPressed();*/
 
-        gv.setNumColumns(3);
+        gv.setNumColumns(4);
 
         if(gridviewAdapter.gvi>0){
             gridviewAdapter.gvi--;

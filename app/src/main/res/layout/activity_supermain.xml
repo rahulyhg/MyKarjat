@@ -55,7 +55,7 @@
 
     <GridView
 
-        android:numColumns="3"
+        android:numColumns="4"
         android:layout_weight="1"
         android:stretchMode="columnWidth"
         android:id="@+id/gvmain"
@@ -66,6 +66,7 @@
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bnvSupermain"
+        android:visibility="gone"
         app:menu="@menu/menu_main"
         android:background="@color/colorPrimary"
         app:itemIconTint="@android:color/white"
@@ -74,6 +75,57 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"/>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tvHome"
+            android:drawableTop="@drawable/home"
+            android:textAlignment="center"
+            android:text="Home"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tvArticles"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:text="Articles"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tvChat"
+            android:textAlignment="center"
+            android:drawableTop="@drawable/chat"
+            android:textColor="@android:color/white"
+            android:text="Chat"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:text="News"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tvRegister"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:drawableTop="@drawable/register2"
+            android:text="Register"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
 
 
     <com.google.android.gms.ads.AdView
