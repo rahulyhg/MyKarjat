@@ -10,7 +10,7 @@
     android:paddingRight="0dp"
     android:paddingTop="1dp"
     android:orientation="vertical"
-    android:background="#ccc"
+    android:background="#eee"
     tools:context="harshad.mykarjat.supermain"
 
     >
