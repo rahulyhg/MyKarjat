@@ -1,1 +1,2 @@
-{}
+{"Snack Corner","Juice Center","Veg Restaurants","Non-Veg Restarurants","Bakery","Cakes","Ice-Creams","Cafe","Sweetmarts","Khanaval","Caterers","Dairy Products",
+"Chinese","Dhaba","Tea Corner"}

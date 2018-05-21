@@ -51,7 +51,9 @@ public class gridviewAdapter extends ArrayAdapter<String> {
         String[] suppliers={"Water","Building Material","News Paper","Vegetables","Fruits","Meat","Fish","Egg","Soil","Ice","Flowers","Labour"};
         String[] entertainment={"Theatre","Multiplex","Event Mgmt","Orchestra","Dancers","Cable N/W","Artists","Clubs"};
         String[] rentedservices={"Drivers","Cars","Tempo/Truck","Bus","Dumper","JCB","Costumes","Parking","Paying Guest","Tractor","Crane"};
-        String[] food={"Snack Corner","Juice Center","Veg Restaurants","Non-Veg Restarurants","Bakery","Cakes","Ice-Creams","Cafe","Sweetmarts","Khanaval","Caterers","Dairy Products"};
+        String[] food={"Snack Corner","Juice Center","Veg Restaurants","Non-Veg Restarurants","Bakery","Cakes","Ice-Creams","Cafe","Sweetmarts","Khanaval","Caterers","Dairy Products",
+                "Chinese","Dhaba","Tea Corner"};
+        String[] holidays={"Resorts","Farm Houses","Bunglows","Lodges","Hotels"};
         //21st May end
 
         public gridviewAdapter(Context context,TypedArray img, int layoutResourceId, String[] data) {
@@ -138,6 +140,12 @@ public class gridviewAdapter extends ArrayAdapter<String> {
                         gvi=1;
                         img=getContext().getResources().obtainTypedArray(R.array.rentedservices);
                         supermain.gv.setAdapter(new gridviewAdapter(getContext(),img, R.layout.gridview, rentedservices));
+                    }
+
+                    if(str.equals("Holidays")) {
+                        gvi=1;
+                        img=getContext().getResources().obtainTypedArray(R.array.holidays);
+                        supermain.gv.setAdapter(new gridviewAdapter(getContext(),img, R.layout.gridview, holidays));
                     }
                     //end 21st may
 

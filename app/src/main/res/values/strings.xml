@@ -181,6 +181,14 @@
         <item>@drawable/test</item>
     </string-array>
 
+    <string-array name="holidays">
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+    </string-array>
+
 
     <!-- 21st May End-->
 
