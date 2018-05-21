@@ -8,7 +8,7 @@
         android:textAllCaps="false"
         android:layout_margin="1dp"
         android:background="@drawable/mainbuttons"
-        android:textColor="#000"
+        android:textColor="#fff"
         android:layout_width="match_parent"
         android:layout_height="57dp" />
     <!-- android:background="#55e" -->
