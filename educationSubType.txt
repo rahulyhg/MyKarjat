@@ -1,0 +1,1 @@
+{"Preschool","School","ITI","Junior College","Senior College","Diploma","Engineering","Pharmacy","School Bus"}

@@ -1,0 +1,2 @@
+{"Health","Education","Classes","Wedding","Services","Suppliers","Entertainment","Rented Services","Food","Holidays","Shops","Daily Needs","Professionals","Emergency",
+"Govt.Offices","Local/Bus","Construction","Beauty","Agents","Banks","Places to Visit","Contact"}

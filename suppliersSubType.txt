@@ -1,0 +1,1 @@
+{"Water","Building Material","News Paper","Vegetables","Fruits","Meat","Fish","Egg","Soil","Ice","Flowers","Labour"}

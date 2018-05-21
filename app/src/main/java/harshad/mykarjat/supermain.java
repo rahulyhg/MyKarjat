@@ -95,7 +95,9 @@ public class supermain extends AppCompatActivity{
     myadapter2 myadp2;
     TextView tvResultCount;
 
-    String[] str={"Health","Agents","Local/Bus","Food","Shop","Construction","Daily Needs","Beauty","Banks","Emergency","Important","Classes","Places to Visit","Contact"};
+   // String[] str={"Health","Agents","Local/Bus","Food","Shops","Construction","Daily Needs","Beauty","Banks","Emergency","Important","Classes","Places to Visit","Contact"};
+    String[] str={"Health","Education","Classes","Wedding","Services","Suppliers","Entertainment","Rented Services","Food","Holidays","Shops","Daily Needs","Professionals","Emergency",
+           "Govt.Offices","Local/Bus","Construction","Beauty","Agents","Banks","Places to Visit","Contact"};
     String[] strdataMain={"Guitar Academy","Mr. Harshad Dagade","Karjat Police Station",
             "Neral Police Station",
             "Matheran Police Station",

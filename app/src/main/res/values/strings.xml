@@ -12,35 +12,161 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="tvscroll">Touch contact number to dial. For advertising, enlisting your service or contact update, kindly contact 9595031739 / 8956107979</string>
+
     <string-array name="imgmain">
         <item>@drawable/health1</item>
-        <item>@drawable/agent1</item>
-        <item>@drawable/bustrain</item>
-        <item>@drawable/food</item>
-        <item>@drawable/shop3</item>
-        <item>@drawable/construction1</item>
-        <item>@drawable/dneeds</item>
-        <item>@drawable/beauty</item>
-        <item>@drawable/bank</item>
-        <item>@drawable/emergency</item>
-        <item>@drawable/important</item>
+        <item>@drawable/test</item>
         <item>@drawable/classes</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/food</item>
+        <item>@drawable/test</item>
+        <item>@drawable/shop3</item>
+        <item>@drawable/dneeds</item>
+        <item>@drawable/test</item>
+        <item>@drawable/emergency</item>
+        <item>@drawable/test</item>
+        <item>@drawable/bustrain</item>
+        <item>@drawable/construction1</item>
+        <item>@drawable/beauty</item>
+        <item>@drawable/agent1</item>
+        <item>@drawable/bank</item>
         <item>@drawable/travel</item>
         <item>@drawable/contact</item>
-        <item>@drawable/registerurbusiness</item>
     </string-array>
 
+    <!-- 21st May start-->
     <string-array name="health">
         <item>@drawable/doctor1</item>
         <item>@drawable/chemist</item>
         <item>@drawable/pathology</item>
         <item>@drawable/bloodbank</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+    </string-array>
 
+    <string-array name="education">
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+    </string-array>
+
+    <string-array name="classes">
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+    </string-array>
+    <string-array name="wedding">
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+    </string-array>
+
+    <string-array name="services">
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+    </string-array>
+
+    <string-array name="suppliers">
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+    </string-array>
+
+    <string-array name="entertainment">
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+    </string-array>
+
+    <string-array name="rentedservices">
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
     </string-array>
 
     <string-array name="food">
         <item>@drawable/snack</item>
         <item>@drawable/juice</item>
+        <item>@drawable/hotel</item>
         <item>@drawable/hotel</item>
         <item>@drawable/bakery</item>
         <item>@drawable/cake</item>
@@ -50,8 +176,13 @@
         <item>@drawable/khanaval</item>
         <item>@drawable/catering</item>
         <item>@drawable/dairy</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
     </string-array>
 
+
+    <!-- 21st May End-->
 
     <string-array name="shop">
         <item>@drawable/mobile</item>

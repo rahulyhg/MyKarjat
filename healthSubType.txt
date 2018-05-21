@@ -1,0 +1,1 @@
+{"Doctors","Medical/Chemist","Pathology","Blood Bank","Ambulance","X-ray & Sonography","Vet.Doctors","MRI/CT Scan","Govt.Hospitals"}

@@ -10,7 +10,7 @@
     android:paddingRight="0dp"
     android:paddingTop="1dp"
     android:orientation="vertical"
-    android:background="@mipmap/back1"
+    android:background="@android:color/white"
     tools:context="harshad.mykarjat.supermain"
 
     >
