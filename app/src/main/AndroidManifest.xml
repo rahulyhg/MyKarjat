@@ -59,7 +59,9 @@
         <activity android:name=".registerBusiness" />
         <activity android:name=".AnotherActivity" />
         <activity android:name=".ChatActivity" />
-        <activity android:name=".GoogleSignInActivity"></activity>
+        <activity android:name=".GoogleSignInActivity" />
+        <activity android:name=".News" />
+        <activity android:name=".Articles"></activity>
     </application>
 
 </manifest>

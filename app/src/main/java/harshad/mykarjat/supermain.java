@@ -790,6 +790,8 @@ public class supermain extends AppCompatActivity{
 
     String url="";
 
+    TextView tvChat,tvHome,tvArticles,tvRegister,tvNews;
+
 
     public static void ifnet(){
         act.finish();
@@ -807,6 +809,7 @@ public class supermain extends AppCompatActivity{
        // Toast.makeText(supermain.this, Prefs.StoreKey+" "+share.getString(Prefs.reg,"no"), Toast.LENGTH_SHORT).show();
         ed=share.edit();
         ed.putString(Prefs.reg,"yes").apply();
+
 
 
 
@@ -830,6 +833,51 @@ public class supermain extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_supermain);
         mcontext=this;
+
+        tvChat=findViewById(R.id.tvChat);
+        tvChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(supermain.this,ChatActivity.class));
+            }
+        });
+
+        tvRegister=findViewById(R.id.tvRegister);
+        tvRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(supermain.this,registerBusiness.class));
+            }
+        });
+
+        tvHome=findViewById(R.id.tvHome);
+        tvHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+           //     startActivity(new Intent(supermain.this,registerBusiness.class));
+                gridviewAdapter.gvi=0;
+                gvadp=new gridviewAdapter(supermain.this,img,R.layout.gridview,str);
+                gv.setAdapter(gvadp);
+            }
+        });
+
+        tvNews=findViewById(R.id.tvNews);
+        tvNews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(supermain.this,News.class));
+            }
+        });
+
+        tvArticles=findViewById(R.id.tvArticles);
+        tvArticles.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(supermain.this,Articles.class));
+            }
+        });
+
+
 
         Firebase.setAndroidContext(this);
         firebase=new Firebase(dburl);
