@@ -10,7 +10,7 @@
         android:background="@drawable/mainbuttons"
         android:textColor="#000"
         android:layout_width="match_parent"
-        android:layout_height="55dp" />
+        android:layout_height="57dp" />
     <!-- android:background="#55e" -->
 
 </LinearLayout>

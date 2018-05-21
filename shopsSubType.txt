@@ -1,0 +1,2 @@
+{"Mobile","Xerox","Men Cloths","Women Cloths","Photo Studio","Cyber Cafe","Footware","Hardware","Steel Utensils","Bag House","Furniture","Spare Parts",
+"Sports Material","Stationary","Books","Opticals","Electronics","Plywood","Gift Shop","Music Instruments","Pet Shop"}

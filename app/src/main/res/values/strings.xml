@@ -189,10 +189,7 @@
         <item>@drawable/test</item>
     </string-array>
 
-
-    <!-- 21st May End-->
-
-    <string-array name="shop">
+    <string-array name="shops">
         <item>@drawable/mobile</item>
         <item>@drawable/xerox</item>
         <item>@drawable/menclothes</item>
@@ -202,6 +199,82 @@
         <item>@drawable/footwear</item>
         <item>@drawable/hardware</item>
         <item>@drawable/steel</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+    </string-array>
+
+    <string-array name="dneeds">
+        <item>@drawable/supermarket</item>
+        <item>@drawable/kirana</item>
+        <item>@drawable/vegetables</item>
+        <item>@drawable/cable</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+    </string-array>
+
+    <string-array name="professionals">
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+    </string-array>
+
+    <string-array name="emergency">
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+    </string-array>
+
+    <string-array name="govtoffices">
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
     </string-array>
 
     <string-array name="construction">
@@ -211,6 +284,7 @@
         <item>@drawable/marble</item>
         <item>@drawable/polish</item>
         <item>@drawable/wallpaper</item>
+        <item>@drawable/test</item>
     </string-array>
 
     <string-array name="beauty">
@@ -218,13 +292,9 @@
         <item>@drawable/saloon</item>
         <item>@drawable/ladiestailor</item>
         <item>@drawable/gentstailor</item>
-    </string-array>
-
-    <string-array name="dneeds">
-        <item>@drawable/supermarket</item>
-        <item>@drawable/kirana</item>
-        <item>@drawable/vegetables</item>
-        <item>@drawable/cable</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
     </string-array>
 
     <string-array name="agents">
@@ -236,7 +306,14 @@
         <item>@drawable/stamp</item>
         <item>@drawable/lic</item>
         <item>@drawable/tax</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
+        <item>@drawable/test</item>
     </string-array>
+    <!-- 21st May End-->
+
+
 
     <string-array name="doctor">
         <item>@drawable/gynaec</item>

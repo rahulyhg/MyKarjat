@@ -1,0 +1,1 @@
+{"Beauty Parlor","Saloon","Ladies Tailor","Gents Tailor","Mehendi","Tattoo","Hair Dresser"}

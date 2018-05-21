@@ -1,0 +1,1 @@
+{"MSEB","Bus Depo","Railway Station","BSNL","Municipal Council","Tehsil Office","Prant Office","Panchayat Samiti","PWD Office","Post Office","Govt. Hospital","Survey Office","Civil Court","Agro Services"}

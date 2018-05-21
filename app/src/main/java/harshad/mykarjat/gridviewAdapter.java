@@ -31,15 +31,15 @@ public class gridviewAdapter extends ArrayAdapter<String> {
         String[] data;
         String[] localbus={"Karjat-CST","CST-Karjat","Karjat-Khopoli","Khopoli-Karjat","Karjat-Panvel Bus","Panvel-Karjat Bus"};
        // String[] food={"Snack Corner","Juice Center","Restaurants","Bakery","Cakes","Ice-Creams","Cafe","Sweetmarts","Khanaval","Caterers","Dairy Products"};
-        String[] shops={"Mobile","Xerox","Men Cloths","Women Cloths","Photo Studio","Cyber Cafe","Footware","Hardware","Steel Utensils"};
+//        String[] shops={"Mobile","Xerox","Men Cloths","Women Cloths","Photo Studio","Cyber Cafe","Footware","Hardware","Steel Utensils"};
         String[] auto={"Tyres","2W Showroom","4W Showroom","2W Garage","4W Garage"};
-        String[] dneeds={"Supermarkets","Kirana","Vegetables/Fruits","Cable Operator/DTH"};
-        String[] beauty={"Parlor","Saloon","Ladies Tailor","Gents Tailor"};
+//        String[] dneeds={"Supermarkets","Kirana","Vegetables/Fruits","Cable Operator/DTH"};
+     //   String[] beauty={"Parlor","Saloon","Ladies Tailor","Gents Tailor"};
       //  String[] health={"Doctors","Medical/Chemist","Pathology","Blood Bank"};
         String[] hospitals={"Gynaecologist","Dentist","Orthopedic","Child Specialist","Cardiologist","Homeopathy","Ayurvedic","ENT","Dermatologist"};
-        String[] construction={"Building Material","Flooring","Steel","Marble","Polish","Wallpaper"};
-        String[] emergency={};
-        String[] agents={"Real Estate","Driving License","Pan Card","Aadhar Card","Travel Agent","Stamp Vendor","LIC","Tax Consultant"};
+//        String[] construction={"Building Material","Flooring","Steel","Marble","Polish","Wallpaper"};
+     //   String[] emergency={};
+//        String[] agents={"Real Estate","Driving License","Pan Card","Aadhar Card","Travel Agent","Stamp Vendor","LIC","Tax Consultant"};
 
         //21st May Start
         String[] health={"Doctors","Medical/Chemist","Pathology","Blood Bank","Ambulance","X-ray & Sonography","Vet.Doctors","MRI/CT Scan","Govt.Hospitals"};
@@ -54,7 +54,17 @@ public class gridviewAdapter extends ArrayAdapter<String> {
         String[] food={"Snack Corner","Juice Center","Veg Restaurants","Non-Veg Restarurants","Bakery","Cakes","Ice-Creams","Cafe","Sweetmarts","Khanaval","Caterers","Dairy Products",
                 "Chinese","Dhaba","Tea Corner"};
         String[] holidays={"Resorts","Farm Houses","Bunglows","Lodges","Hotels"};
-        //21st May end
+        String[] shops={"Mobile","Xerox","Men Cloths","Women Cloths","Photo Studio","Cyber Cafe","Footware","Hardware","Steel Utensils","Bag House","Furniture","Spare Parts",
+                "Sports Material","Stationary","Books","Opticals","Electronics","Plywood","Gift Shop","Music Instruments","Pet Shop"};
+        String[] dneeds={"Supermarkets","Kirana","Vegetables","Fruits","Dairy","Fish","Meat","Bakery","Sweetmart","Juice Center","Ice-Cream"};
+        String[] professionals={"Android Developer","Software Developers","Website Designer","Chartered Accountants","Advocates","Photographers","Security","Gym Intructor","Journalist","Interior Designer","PUC","Courier","Pest Control","Architect","Vastu Shastra","Dietician","Astrologer","Printing"};
+        String[] emergency={"Police","Fire Brigade","Ambulance","Snake Friends","Towing","Gas Agency","Petrol Pump","Rescuers","Parking"};
+        String[] govtoffices={"MSEB","Bus Depo","Railway Station","BSNL","Municipal Council","Tehsil Office","Prant Office","Panchayat Samiti","PWD Office","Post Office","Govt. Hospital","Survey Office","Civil Court","Agro Services"};
+        String[] construction={"Building Material","Flooring","Steel","Marble","Polish","Wallpaper","Tiles/Ceramics"};
+        String[] beauty={"Beauty Parlor","Saloon","Ladies Tailor","Gents Tailor","Mehendi","Tattoo","Hair Dresser"};
+        String[] agents={"Real Estate","Driving License","Pan Card","Aadhar Card","Travel Agent","Stamp Vendor","Life Insurance","Tax Consultant","Vehicle Insurance","Medical Insurance","Passport","Loans"};
+
+    //21st May end
 
         public gridviewAdapter(Context context,TypedArray img, int layoutResourceId, String[] data) {
             super(context,layoutResourceId, data);
@@ -99,6 +109,19 @@ public class gridviewAdapter extends ArrayAdapter<String> {
                 @Override
                 public void onClick(View v) {
                     //21st may
+
+                    if(str.equals("Emergency")) {
+                        gvi=1;
+                        img=getContext().getResources().obtainTypedArray(R.array.emergency);
+                        supermain.gv.setAdapter(new gridviewAdapter(getContext(),img, R.layout.gridview, emergency));
+                    }
+
+                    if(str.equals("Govt. Offices")) {
+                        gvi=1;
+                        img=getContext().getResources().obtainTypedArray(R.array.govtoffices);
+                        supermain.gv.setAdapter(new gridviewAdapter(getContext(),img, R.layout.gridview, govtoffices));
+                    }
+
                     if(str.equals("Education")) {
                         gvi=1;
                         img=getContext().getResources().obtainTypedArray(R.array.education);
@@ -147,6 +170,14 @@ public class gridviewAdapter extends ArrayAdapter<String> {
                         img=getContext().getResources().obtainTypedArray(R.array.holidays);
                         supermain.gv.setAdapter(new gridviewAdapter(getContext(),img, R.layout.gridview, holidays));
                     }
+
+                    if(str.equals("Professionals")) {
+                        gvi=1;
+                        img=getContext().getResources().obtainTypedArray(R.array.professionals);
+                        supermain.gv.setAdapter(new gridviewAdapter(getContext(),img, R.layout.gridview, professionals));
+                    }
+
+
                     //end 21st may
 
                     if(str.equals("Health")) {
@@ -181,7 +212,7 @@ public class gridviewAdapter extends ArrayAdapter<String> {
                     }
                     if(str.equals("Shops")) {
                         gvi=1;
-                        img=getContext().getResources().obtainTypedArray(R.array.shop);
+                        img=getContext().getResources().obtainTypedArray(R.array.shops);
                         supermain.gv.setAdapter(new gridviewAdapter(getContext(), img,R.layout.gridview, shops));
                     }
                     if(str.equals("Construction")) {
@@ -205,12 +236,7 @@ public class gridviewAdapter extends ArrayAdapter<String> {
                         getContext().startActivity(new Intent(getContext(),result.class));
                         //supermain.gv.setAdapter(new gridviewAdapter(getContext(), R.layout.gridview, food));
                     }
-                    if(str.equals("Emergency")) {
-                        gvi=1;
-                        MainActivity.choice=1;
-                        getContext().startActivity(new Intent(getContext(),MainActivity.class));
-//                        supermain.gv.setAdapter(new gridviewAdapter(getContext(), R.layout.gridview, emergency));
-                    }
+
                     if(str.equals("Important")) {
                         gvi=1;
                         MainActivity.choice=2;

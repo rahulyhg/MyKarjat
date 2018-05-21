@@ -1,0 +1,1 @@
+{  "Supermarkets","Kirana","Vegetables","Fruits","Dairy","Fish","Meat","Bakery","Sweetmart","Juice Center","Ice-Cream"}

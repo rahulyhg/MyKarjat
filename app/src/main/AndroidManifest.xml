@@ -21,7 +21,8 @@
             android:name=".result"
             android:screenOrientation="portrait" />
         <activity android:name=".advertise" />
-        <activity android:name=".supermain">
+        <activity android:name=".supermain"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
