@@ -17,7 +17,7 @@ public class dbHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String table_create_query="create table user(name text,shopname text,address text,phone text)";
+        String table_create_query="create table user(name text,shopname text,address text,phone text,keywords text)";
         db.execSQL(table_create_query);
 
     }
@@ -51,7 +51,7 @@ public class dbHelper extends SQLiteOpenHelper {
     }
 
 
-    void enterdata(String name,String shopname,String address,String phone){
+    void enterdata(String name,String shopname,String address,String phone,String keywords){
         try{
             SQLiteDatabase dbase=getWritableDatabase();
             ContentValues values=new ContentValues();
@@ -60,6 +60,7 @@ public class dbHelper extends SQLiteOpenHelper {
             values.put("shopname",shopname);
             values.put("address",address);
             values.put("phone",phone);
+            values.put("keywords",keywords);
 
             dbase.insert("user",null,values);
 

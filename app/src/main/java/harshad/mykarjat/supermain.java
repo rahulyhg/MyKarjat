@@ -794,6 +794,7 @@ public class supermain extends AppCompatActivity{
     SharedPreferences.Editor ed;
 
     String url="";
+    String tag="thisissupermain";
 
     TextView tvChat,tvHome,tvArticles,tvRegister,tvNews;
 
@@ -1065,7 +1066,7 @@ public class supermain extends AppCompatActivity{
 
                 @Override
                 public void onDataChange(com.google.firebase.database.DataSnapshot dataSnapshot) {
-                    //dbase.delete("user",null,null);
+                    dbase.delete("user",null,null);
                     i=0;j=0;
                     aadp.clear();
                     strSearch=new String[(int)dataSnapshot.getChildrenCount()][5] ;
@@ -1088,7 +1089,7 @@ public class supermain extends AppCompatActivity{
                         j++;
                         strSearch[i][j]=pson.getKeywords();
 
-                       // db.enterdata(pson.getName(),pson.getShopname(),pson.getAddress(),pson.getPhone());
+                       // db.enterdata(pson.getName(),pson.getShopname(),pson.getAddress(),pson.getPhone(),pson.getKeywords());
 
                         Log.d("logg","inside i "+data.getKey()+" "+dataSnapshot.getChildrenCount());
                         j=0;
@@ -1100,25 +1101,28 @@ public class supermain extends AppCompatActivity{
 
                     }
 
-                    //27th may 2018 writing into internal storage file
-                    FileOutputStream fo=null;
-                    try {
-                        fo=openFileOutput("mykarjat.txt",MODE_PRIVATE);
-                        for(int i=0;i<strSearch.length;i++) {
-                            for (int j = 0; j < strSearch[i].length; j++) {
-                                fo.write(strSearch[i][j].getBytes());
-                            }
+                    Toast.makeText(supermain.this, ""+strSearch.length , Toast.LENGTH_SHORT).show();
+                    dbase.beginTransaction();
+                    try{
+                        ContentValues values=new ContentValues();
+                        for(int i=0;i<strSearch.length;i++){
+
+                            values.put("shopname",strSearch[i][0]);
+                            values.put("name",strSearch[i][1]);
+                            values.put("address",strSearch[i][2]);
+                            values.put("phone",strSearch[i][3]);
+                            values.put("keywords",strSearch[i][4]);
+                            dbase.insert("user",null,values);
+                            //Log.d(tag,"write "+(i+1)+": "+strSearch[i][0]);
                         }
-                    } catch(Exception e) {
-                        Toast.makeText(supermain.this, e.toString(), Toast.LENGTH_SHORT).show();
-                    }finally {
-                        try {
-                            fo.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+                        dbase.setTransactionSuccessful();
                     }
-                    Toast.makeText(supermain.this, ""+strSearch[0][0], Toast.LENGTH_SHORT).show();
+                    finally {
+                        dbase.endTransaction();
+                    }
+
+
+
 
                 }
 
@@ -1141,36 +1145,16 @@ public class supermain extends AppCompatActivity{
             Snackbar sb=Snackbar.make(this.findViewById(R.id.activity_supermain),"Internet not available. Offline Mode !",Snackbar.LENGTH_SHORT);
             sb.show();
 
-            //27th May 2018 reading from internal storage file
-            FileInputStream fi=null;
-
-            try{
-                fi=openFileInput("mykarjat.txt");
-                int c;
-                String[][] data="";
-                while((c=fi.read())!=-1){
-                    data=data+Character.toString((char)c);
-                }
-                Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
-            }
-            catch (Exception e){
-                Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
-            }finally {
-                try {
-                    fi.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
 
 //            toast("inside else");
             //mainWv.addJavascriptInterface(new WebAppInterface(this),"Android");*/
 
-            /*Context c = this;
+            Context c = this;
 
-            dbase=db.getWritableDatabase();
+            dbase=db.getReadableDatabase();
             String cq="select * from user";
             Cursor cursor=dbase.rawQuery(cq,null);
+            Toast.makeText(this, ""+cursor.getCount(), Toast.LENGTH_SHORT).show();
             strSearch=new String[cursor.getCount()][5];
 //            Log.d("cursor","logged"+cq);
             for(int i=0;i<cursor.getCount();i++) {
@@ -1180,10 +1164,9 @@ public class supermain extends AppCompatActivity{
                 strSearch[i][2] = cursor.getString(2);
                 strSearch[i][3] = cursor.getString(3);
                 strSearch[i][4] = cursor.getString(4);
-//                    Log.d("cursor", test[i]);
+                Log.d(tag, "retrieve "+strSearch[i][1]);
 
             }
-            */
 
             aadp = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, strdataMain);
             actv.setAdapter(aadp);
