@@ -1101,7 +1101,7 @@ public class supermain extends AppCompatActivity{
 
                     }
 
-                    Toast.makeText(supermain.this, ""+strSearch.length , Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(supermain.this, ""+strSearch.length , Toast.LENGTH_SHORT).show();
                     dbase.beginTransaction();
                     try{
                         ContentValues values=new ContentValues();
@@ -1164,7 +1164,7 @@ public class supermain extends AppCompatActivity{
                 strSearch[i][2] = cursor.getString(2);
                 strSearch[i][3] = cursor.getString(3);
                 strSearch[i][4] = cursor.getString(4);
-                Log.d(tag, "retrieve "+strSearch[i][1]);
+              //  Log.d(tag, "retrieve "+strSearch[i][1]);
 
             }
 

@@ -151,6 +151,27 @@
 
                 <TextView
                     android:textColor="#000"
+                    android:text="Type"
+                    android:paddingLeft="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:id="@+id/spinnerType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="#000"
+                    android:text="Subtype"
+                    android:paddingLeft="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:id="@+id/spinnerSubtype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="#000"
                     android:text="Shop Name/Business Name"
                     android:paddingLeft="2dp"
                     android:layout_width="match_parent"

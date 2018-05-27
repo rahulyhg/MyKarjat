@@ -12,12 +12,15 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.QuickContactBadge;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,8 +58,32 @@ public class registerBusiness extends AppCompatActivity {
     int i=0;
     int flag=0;
 
-    ScrollView svRegBusiness;
+    ArrayAdapter<String> adpType, adpSubtype;
+    String[] mainType={"Health","Education","Classes","Wedding","Services","Suppliers","Entertainment","Rented Services","Food","Holidays",
+            "Shops","Daily Needs","Professionals","Emergency","Construction","Beauty","Agents"};
+    String[] subHealth={"Doctors","Medical/Chemist","Pathology","Blood Bank","Ambulance","X-ray & Sonography","Vet.Doctors","MRI/CT Scan","Govt.Hospitals"};
+    String[] subEducation={"Preschool","School","ITI","Junior College","Senior College","Diploma","Engineering","Pharmacy","School Bus"};
+    String[] subClasses={"Music","Acting","Karate","Typing","Yoga","Computer","Singing","Dance","Primary","Secondary","SSC","HSC","Diploma","Engineering","Commerce"};
+    String[] subWedding={"Brahman","Pooja Sahitya","Hall","Mandap","Caterers","Feta","Horse","Music Band"};
+    String[] subServices={"Carpenter","Plumber","Painter","Water Filter","Electrician","Welder","Gavandi","Inverters","Refrigeration","LPG/Stove","Mobile","Computers","Software","Key Maker","Laundry","Dry Cleaning","Tank Cleaning","Internet","Cable TV","Drivers","Borewell","Cyber","Maid Servants","Mess/Tiffin","Name Plate","Rubber Stamp","Waterproofing","Solar Products","Towing"};
+    String[] subSuppliers={"Water","Building Material","News Paper","Vegetables","Fruits","Meat","Fish","Egg","Soil","Ice","Flowers","Labour"};
+    String[] subEntertainment={"Theatre","Multiplex","Event Mgmt","Orchestra","Dancers","Cable N/W","Artists","Clubs"};
+    String[] subRentedServices={"Drivers","Cars","Tempo/Truck","Bus","Dumper","JCB","Costumes","Parking","Paying Guest","Tractor","Crane"};
+    String[] subFood={"Snack Corner","Juice Center","Veg Restaurants","Non-Veg Restarurants","Bakery","Cakes","Ice-Creams","Cafe","Sweetmarts","Khanaval","Caterers","Dairy Products",
+            "Chinese","Dhaba","Tea Corner"};
+    String[] subHolidays={"Resorts","Farm Houses","Bunglows","Lodges","Hotels"};
+    String[] subShops={"Mobile","Xerox","Men Cloths","Women Cloths","Photo Studio","Cyber Cafe","Footware","Hardware","Steel Utensils","Bag House","Furniture","Spare Parts",
+            "Sports Material","Stationary","Books","Opticals","Electronics","Plywood","Gift Shop","Music Instruments","Pet Shop"};
+    String[] subDailyNeeds={  "Supermarkets","Kirana","Vegetables","Fruits","Dairy","Fish","Meat","Bakery","Sweetmart","Juice Center","Ice-Cream"};
+    String[] subProfessionals={"Android Developer","Software Developers","Website Designer","Chartered Accountants","Advocates","Photographers","Security","Gym Intructor","Journalist","Interior Designer","PUC","Courier","Pest Control","Architect","Vastu Shastra","Dietician","Astrologer","Printing"};
+    String[] subEmergency={"Police","Fire Brigade","Ambulance","Snake Friends","Towing","Gas Agency","Petrol Pump","Rescuers","Parking"};
+    String[] subGovtOffices={"MSEB","Bus Depo","Railway Station","BSNL","Municipal Council","Tehsil Office","Prant Office","Panchayat Samiti","PWD Office","Post Office","Govt. Hospital","Survey Office","Civil Court","Agro Services"};
+    String[] subConstruction={"Building Material","Flooring","Steel","Marble","Polish","Wallpaper","Tiles/Ceramics"};
+    String[] subBeauty={"Beauty Parlor","Saloon","Ladies Tailor","Gents Tailor","Mehendi","Tattoo","Hair Dresser"};
+    String[] subAgents={"Real Estate","Driving License","Pan Card","Aadhar Card","Travel Agent","Stamp Vendor","Life Insurance","Tax Consultant","Vehicle Insurance","Medical Insurance","Passport","Loans"};
 
+    ScrollView svRegBusiness;
+    Spinner spinnerType,spinnerSubtype;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +97,76 @@ public class registerBusiness extends AppCompatActivity {
         Log.d("rgbus",""+submitEdit+" "+page);
 
 
+        spinnerType=findViewById(R.id.spinnerType);
+        spinnerSubtype=findViewById(R.id.spinnerSubtype);
+
+        adpType=new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,mainType);
+        spinnerType.setAdapter(adpType);
+
+        spinnerType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 0:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subHealth);
+                        break;
+                    case 1:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subEducation);
+                        break;
+                    case 2:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subClasses);
+                        break;
+                    case 3:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subWedding);
+                        break;
+                    case 4:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subServices);
+                        break;
+                    case 5:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subSuppliers);
+                        break;
+                    case 6:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subEntertainment);
+                        break;
+                    case 7:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subRentedServices);
+                        break;
+                    case 8:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subFood);
+                        break;
+                    case 9:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subHolidays);
+                        break;
+                    case 10:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subShops);
+                        break;
+                    case 11:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subDailyNeeds);
+                        break;
+                    case 12:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subProfessionals);
+                        break;
+                    case 13:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subEmergency);
+                        break;
+                    case 14:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subConstruction);
+                        break;
+                    case 15:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subBeauty);
+                        break;
+                    case 16:
+                        adpSubtype=new ArrayAdapter<String>(registerBusiness.this,android.R.layout.simple_spinner_dropdown_item,subAgents);
+                        break;
+                }
+                spinnerSubtype.setAdapter(adpSubtype);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         wvregBusiness=(WebView)findViewById(R.id.wvregisterbusiness);
         wvregBusiness.setWebViewClient(new WebViewClient());
         wvregBusiness.getSettings().setJavaScriptEnabled(true);
@@ -256,6 +353,10 @@ public class registerBusiness extends AppCompatActivity {
                                     fb.setAddress(etAddress.getText().toString());
                                     fb.setPhone(etContact.getText().toString());
                                     fb.setKeywords(etRBKeywords.getText().toString());
+                                    fb.setType(spinnerType.getSelectedItem().toString());
+                                    fb.setSubtype(spinnerSubtype.getSelectedItem().toString());
+                                    fb.setTypeposition(String.valueOf(spinnerType.getSelectedItemPosition()));
+                                    fb.setSubtypeposition(String.valueOf(spinnerSubtype.getSelectedItemPosition()));
 
                                     firebase.child("business").push().setValue(fb);
                                     Snackbar.make(getCurrentFocus(), "Registered Successfully !", Snackbar.LENGTH_SHORT).show();
@@ -283,6 +384,11 @@ public class registerBusiness extends AppCompatActivity {
                                     taskMap.put("address", etAddress.getText().toString());
                                     taskMap.put("phone", etContact.getText().toString());
                                     taskMap.put("keywords", etRBKeywords.getText().toString());
+                                    taskMap.put("type",spinnerType.getSelectedItem().toString());
+                                    taskMap.put("subtype",spinnerSubtype.getSelectedItem().toString());
+                                    taskMap.put("typeposition",String.valueOf(spinnerType.getSelectedItemPosition()));
+                                    taskMap.put("subtypeposition",String.valueOf(spinnerSubtype.getSelectedItemPosition()));
+
                                     firebase.child("business").child(key).updateChildren(taskMap);
                                     Snackbar.make(getCurrentFocus(), "Updated Successfully !", Snackbar.LENGTH_SHORT).show();
                                     onBackPressed();
@@ -339,6 +445,12 @@ public class registerBusiness extends AppCompatActivity {
                                     etAddress.setText(fb.getAddress());
                                     etContact.setText(fb.getPhone());
                                     etRBKeywords.setText(fb.getKeywords());
+                                   try {
+                                       spinnerType.setSelection(Integer.parseInt(fb.getTypeposition()));
+                                       spinnerSubtype.setSelection(Integer.parseInt(fb.getSubtypeposition()));
+                                   }
+                                   catch (Exception e){
+                                   }
                                 }
                             }
 
