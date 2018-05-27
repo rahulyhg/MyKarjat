@@ -1062,68 +1062,106 @@ public class supermain extends AppCompatActivity{
             Query query = dbRef.child("business");
             query.addValueEventListener(new com.google.firebase.database.ValueEventListener() {
 
-                int i=0,j=0;
+                int i=0,j=0,diffcount=0;
 
                 @Override
                 public void onDataChange(com.google.firebase.database.DataSnapshot dataSnapshot) {
-                    dbase.delete("user",null,null);
-                    i=0;j=0;
-                    aadp.clear();
-                    strSearch=new String[(int)dataSnapshot.getChildrenCount()][5] ;
 
-                    for (DataSnapshot data : dataSnapshot.getChildren()) {
-                        fbase pson = data.getValue(fbase.class);
-                        aadp.add(pson.getName());
-                        aadp.add(pson.getShopname());
-                        aadp.add(pson.getAddress());
-                        aadp.add(pson.getPhone());
+                    dbase=db.getReadableDatabase();
+                    String cq="select * from user";
+                    Cursor cursor=dbase.rawQuery(cq,null);
+                    diffcount=(int)dataSnapshot.getChildrenCount()-cursor.getCount();
 
+                    if(diffcount==0)
+                        Toast.makeText(supermain.this, "Database upto date !", Toast.LENGTH_SHORT).show();
 
-                        strSearch[i][j]=pson.getShopname();
-                        j++;
-                        strSearch[i][j]=pson.getName();
-                        j++;
-                        strSearch[i][j]=pson.getAddress();
-                        j++;
-                        strSearch[i][j]=pson.getPhone();
-                        j++;
-                        strSearch[i][j]=pson.getKeywords();
+                    else if((int)dataSnapshot.getChildrenCount()>cursor.getCount()){
+                        Log.d("this is ",""+dataSnapshot.getChildrenCount()+" "+cursor.getCount());
+                        Query qw=dbRef.child("business").limitToLast(diffcount);
+                        qw.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                              //  dbase.delete("user",null,null);
+                                i=0;j=0;
+                                aadp.clear();
+                                strSearch=new String[(int)dataSnapshot.getChildrenCount()][5] ;
 
-                       // db.enterdata(pson.getName(),pson.getShopname(),pson.getAddress(),pson.getPhone(),pson.getKeywords());
+                                for (DataSnapshot data : dataSnapshot.getChildren()) {
+                                    fbase pson = data.getValue(fbase.class);
+                                  /*  aadp.add(pson.getName());
+                                    aadp.add(pson.getShopname());
+                                    aadp.add(pson.getAddress());
+                                    aadp.add(pson.getPhone());
+                                */
 
-                        Log.d("logg","inside i "+data.getKey()+" "+dataSnapshot.getChildrenCount());
-                        j=0;
-                        i++;
+                                    strSearch[i][j]=pson.getShopname();
+                                    j++;
+                                    strSearch[i][j]=pson.getName();
+                                    j++;
+                                    strSearch[i][j]=pson.getAddress();
+                                    j++;
+                                    strSearch[i][j]=pson.getPhone();
+                                    j++;
+                                    strSearch[i][j]=pson.getKeywords();
+
+                                    // db.enterdata(pson.getName(),pson.getShopname(),pson.getAddress(),pson.getPhone(),pson.getKeywords());
+
+                                    Log.d("logg","inside i "+data.getKey()+" "+dataSnapshot.getChildrenCount());
+                                    j=0;
+                                    i++;
 
 //                    a=pson.getadd();
 //                    if(i==1){ b=pson.getadd();Log.d("logg","inside i eqil 1"+b);}
 //                    if(i==2) c=pson.getadd();
 
+                                }
+                                dbase=db.getWritableDatabase();
+                                dbase.beginTransaction();
+                                try{
+                                    ContentValues values=new ContentValues();
+                                    for(int i=0;i<strSearch.length;i++){
+
+                                        values.put("shopname",strSearch[i][0]);
+                                        values.put("name",strSearch[i][1]);
+                                        values.put("address",strSearch[i][2]);
+                                        values.put("phone",strSearch[i][3]);
+                                        values.put("keywords",strSearch[i][4]);
+                                        dbase.insert("user",null,values);
+                                        //Log.d(tag,"write "+(i+1)+": "+strSearch[i][0]);
+                                    }
+                                    dbase.setTransactionSuccessful();
+                                }
+                                finally {
+                                    dbase.endTransaction();
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+                        });
+                        Toast.makeText(supermain.this, diffcount+" records Updated !", Toast.LENGTH_SHORT).show();
                     }
+
 
                    // Toast.makeText(supermain.this, ""+strSearch.length , Toast.LENGTH_SHORT).show();
-                    dbase.beginTransaction();
-                    try{
-                        ContentValues values=new ContentValues();
-                        for(int i=0;i<strSearch.length;i++){
+                    dbase=db.getReadableDatabase();
+                    String cread="select * from user";
+                    Cursor cursor2=dbase.rawQuery(cread,null);
+                    //Toast.makeText(supermain.this, ""+cursor2.getCount(), Toast.LENGTH_SHORT).show();
+                    strSearch=new String[cursor.getCount()][5];
+//            Log.d("cursor","logged"+cq);
+                    for(int i=0;i<cursor.getCount();i++) {
+                        cursor.moveToNext();
+                        strSearch[i][0] = cursor.getString(0);
+                        strSearch[i][1] = cursor.getString(1);
+                        strSearch[i][2] = cursor.getString(2);
+                        strSearch[i][3] = cursor.getString(3);
+                        strSearch[i][4] = cursor.getString(4);
+                        //  Log.d(tag, "retrieve "+strSearch[i][1]);
 
-                            values.put("shopname",strSearch[i][0]);
-                            values.put("name",strSearch[i][1]);
-                            values.put("address",strSearch[i][2]);
-                            values.put("phone",strSearch[i][3]);
-                            values.put("keywords",strSearch[i][4]);
-                            dbase.insert("user",null,values);
-                            //Log.d(tag,"write "+(i+1)+": "+strSearch[i][0]);
-                        }
-                        dbase.setTransactionSuccessful();
                     }
-                    finally {
-                        dbase.endTransaction();
-                    }
-
-
-
-
                 }
 
 
@@ -1154,7 +1192,7 @@ public class supermain extends AppCompatActivity{
             dbase=db.getReadableDatabase();
             String cq="select * from user";
             Cursor cursor=dbase.rawQuery(cq,null);
-            Toast.makeText(this, ""+cursor.getCount(), Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, ""+cursor.getCount(), Toast.LENGTH_SHORT).show();
             strSearch=new String[cursor.getCount()][5];
 //            Log.d("cursor","logged"+cq);
             for(int i=0;i<cursor.getCount();i++) {
@@ -1172,7 +1210,6 @@ public class supermain extends AppCompatActivity{
             actv.setAdapter(aadp);
 
         }
-
 
 
         actv.addTextChangedListener(new TextWatcher() {
