@@ -62,7 +62,8 @@ public class gridviewAdapter extends ArrayAdapter<String> {
         String[] govtoffices={"MSEB","Bus Depo","Railway Station","BSNL","Municipal Council","Tehsil Office","Prant Office","Panchayat Samiti","PWD Office","Post Office","Govt. Hospital","Survey Office","Civil Court","Agro Services"};
         String[] construction={"Building Material","Flooring","Steel","Marble","Polish","Wallpaper","Tiles/Ceramics"};
         String[] beauty={"Beauty Parlor","Saloon","Ladies Tailor","Gents Tailor","Mehendi","Tattoo","Hair Dresser"};
-        String[] agents={"Real Estate","Driving License","Pan Card","Aadhar Card","Travel Agent","Stamp Vendor","Life Insurance","Tax Consultant","Vehicle Insurance","Medical Insurance","Passport","Loans"};
+        String[] agents={"Real Estate","Driving License","Pan Card","Aadhar Card","Travel Agent","Stamp Vendor","Life Insurance","Tax Consultant","Vehicle Insurance","Medical Insurance","Passport","Loans"
+        };
 
     //21st May end
 

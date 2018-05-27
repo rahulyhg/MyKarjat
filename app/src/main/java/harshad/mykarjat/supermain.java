@@ -65,6 +65,9 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.List;
 
 public class supermain extends AppCompatActivity{
@@ -1097,6 +1100,26 @@ public class supermain extends AppCompatActivity{
 
                     }
 
+                    //27th may 2018 writing into internal storage file
+                    FileOutputStream fo=null;
+                    try {
+                        fo=openFileOutput("mykarjat.txt",MODE_PRIVATE);
+                        for(int i=0;i<strSearch.length;i++) {
+                            for (int j = 0; j < strSearch[i].length; j++) {
+                                fo.write(strSearch[i][j].getBytes());
+                            }
+                        }
+                    } catch(Exception e) {
+                        Toast.makeText(supermain.this, e.toString(), Toast.LENGTH_SHORT).show();
+                    }finally {
+                        try {
+                            fo.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    Toast.makeText(supermain.this, ""+strSearch[0][0], Toast.LENGTH_SHORT).show();
+
                 }
 
 
@@ -1118,10 +1141,32 @@ public class supermain extends AppCompatActivity{
             Snackbar sb=Snackbar.make(this.findViewById(R.id.activity_supermain),"Internet not available. Offline Mode !",Snackbar.LENGTH_SHORT);
             sb.show();
 
+            //27th May 2018 reading from internal storage file
+            FileInputStream fi=null;
+
+            try{
+                fi=openFileInput("mykarjat.txt");
+                int c;
+                String[][] data="";
+                while((c=fi.read())!=-1){
+                    data=data+Character.toString((char)c);
+                }
+                Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
+            }
+            catch (Exception e){
+                Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+            }finally {
+                try {
+                    fi.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
 //            toast("inside else");
             //mainWv.addJavascriptInterface(new WebAppInterface(this),"Android");*/
 
-            Context c = this;
+            /*Context c = this;
 
             dbase=db.getWritableDatabase();
             String cq="select * from user";
@@ -1138,6 +1183,7 @@ public class supermain extends AppCompatActivity{
 //                    Log.d("cursor", test[i]);
 
             }
+            */
 
             aadp = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, strdataMain);
             actv.setAdapter(aadp);
