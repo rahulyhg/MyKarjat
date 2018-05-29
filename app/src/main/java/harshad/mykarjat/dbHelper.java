@@ -17,7 +17,7 @@ public class dbHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String table_create_query="create table user(name text,shopname text,address text,phone text,keywords text)";
+        String table_create_query="create table user(shopname text,name text,address text,phone text,keywords text)";
         db.execSQL(table_create_query);
 
     }

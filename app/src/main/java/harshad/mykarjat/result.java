@@ -803,7 +803,7 @@ public class result extends AppCompatActivity {
                 break;
             case 4:
                 String[][] bakery={{"New Monali Bakery","Mr.VikasTupe/Mr.PrakashTupe","Near Shree Ram Bridge,Amrai,Karjat-Raigad 410201","9225733179"},
-                        {"Shree Kirsha Ayangar Bakery","","",""},{"Meher Bakery","Mr.Meher","Near Hanuman Mandir,Karjat-Raigad 410201","9371207527"}};
+                        {"Shree Kirsha Ayangar Bakery","","",""},{"Meher Bakery","Mr.Meher","Near Hanuman Mandir, Karjat-Raigad 410201","9371207527"}};
                 adp=new myadapter2(this,R.layout.mylist2,bakery);
                 break;
             case 5:
