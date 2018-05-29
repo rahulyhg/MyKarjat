@@ -110,7 +110,7 @@
 
     <RelativeLayout
         android:id="@+id/rlRBRegister"
-        android:visibility="gone"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ScrollView
@@ -157,8 +157,9 @@
                     android:layout_height="wrap_content" />
                 <Spinner
                     android:id="@+id/spinnerType"
+                    android:background="#ddd"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="40dp"/>
                 <TextView
                     android:textColor="#000"
                     android:text="Subtype"
@@ -167,8 +168,9 @@
                     android:layout_height="wrap_content" />
                 <Spinner
                     android:id="@+id/spinnerSubtype"
+                    android:background="#ddd"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="40dp"/>
 
                 <TextView
                     android:textColor="#000"
