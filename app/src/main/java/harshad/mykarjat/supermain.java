@@ -1138,7 +1138,6 @@ public class supermain extends AppCompatActivity{
 
                             @Override
                             public void onCancelled(DatabaseError databaseError) {
-
                             }
                         });
                         Toast.makeText(supermain.this, diffcount+" records Updated !", Toast.LENGTH_SHORT).show();
