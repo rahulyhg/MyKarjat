@@ -1150,7 +1150,7 @@ public class supermain extends AppCompatActivity{
                     String cread="select * from user";
                     Cursor cursor2=dbase.rawQuery(cread,null);
                     //Toast.makeText(supermain.this, ""+cursor2.getCount(), Toast.LENGTH_SHORT).show();
-                    strSearch=new String[cursor.getCount()][5];
+                    strSearch=new String[cursor2.getCount()][5];
 //            Log.d("cursor","logged"+cq);
                     for(int i=0;i<cursor.getCount();i++) {
                         cursor.moveToNext();
