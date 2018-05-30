@@ -57,6 +57,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -1115,6 +1116,7 @@ public class supermain extends AppCompatActivity{
 //                    if(i==2) c=pson.getadd();
 
                                 }
+                              //  Toast.makeText(supermain.this, "strsearch length "+strSearch.length, Toast.LENGTH_SHORT).show();
                                 dbase=db.getWritableDatabase();
                                 dbase.beginTransaction();
                                 try{
@@ -1134,6 +1136,23 @@ public class supermain extends AppCompatActivity{
                                 finally {
                                     dbase.endTransaction();
                                 }
+
+                                dbase=db.getReadableDatabase();
+                                String cread="select * from user";
+                                Cursor cursor2=dbase.rawQuery(cread,null);
+                              //  Toast.makeText(supermain.this, "c2 count"+cursor2.getCount(), Toast.LENGTH_SHORT).show();
+                                strSearch=new String[cursor2.getCount()][5];
+//            Log.d("cursor","logged"+cq);
+                                for(int i=0;i<cursor2.getCount();i++) {
+                                    cursor2.moveToNext();
+                                    strSearch[i][0] = cursor2.getString(0);
+                                    strSearch[i][1] = cursor2.getString(1);
+                                    strSearch[i][2] = cursor2.getString(2);
+                                    strSearch[i][3] = cursor2.getString(3);
+                                    strSearch[i][4] = cursor2.getString(4);
+                                    //  Log.d(tag, "retrieve "+strSearch[i][1]);
+
+                                }
                             }
 
                             @Override
@@ -1148,19 +1167,20 @@ public class supermain extends AppCompatActivity{
                     dbase=db.getReadableDatabase();
                     String cread="select * from user";
                     Cursor cursor2=dbase.rawQuery(cread,null);
-                    //Toast.makeText(supermain.this, ""+cursor2.getCount(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(supermain.this, "c2 count"+cursor2.getCount(), Toast.LENGTH_SHORT).show();
                     strSearch=new String[cursor2.getCount()][5];
 //            Log.d("cursor","logged"+cq);
-                    for(int i=0;i<cursor.getCount();i++) {
-                        cursor.moveToNext();
-                        strSearch[i][0] = cursor.getString(0);
-                        strSearch[i][1] = cursor.getString(1);
-                        strSearch[i][2] = cursor.getString(2);
-                        strSearch[i][3] = cursor.getString(3);
-                        strSearch[i][4] = cursor.getString(4);
+                    for(int i=0;i<cursor2.getCount();i++) {
+                        cursor2.moveToNext();
+                        strSearch[i][0] = cursor2.getString(0);
+                        strSearch[i][1] = cursor2.getString(1);
+                        strSearch[i][2] = cursor2.getString(2);
+                        strSearch[i][3] = cursor2.getString(3);
+                        strSearch[i][4] = cursor2.getString(4);
                         //  Log.d(tag, "retrieve "+strSearch[i][1]);
 
                     }
+
                 }
 
 
@@ -1170,7 +1190,6 @@ public class supermain extends AppCompatActivity{
 
                 }
             });
-
 
           //  toast(""+strSearch.length);
 
