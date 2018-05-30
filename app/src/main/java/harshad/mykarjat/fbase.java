@@ -14,6 +14,7 @@ public class fbase {
     private String keywords;
     private String status, url;
     private String type,subtype,typeposition,subtypeposition;
+    private String key;
 
     public fbase(){
     }
@@ -27,6 +28,14 @@ public class fbase {
         this.=;
     }
     */
+
+    public String getKey(){
+        return key;
+    }
+
+    public void setKey(String key){
+        this.key=key;
+    }
 
     public String getTypeposition(){
         return typeposition;
