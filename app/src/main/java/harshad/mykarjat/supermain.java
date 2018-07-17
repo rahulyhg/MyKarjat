@@ -913,15 +913,15 @@ public class supermain extends AppCompatActivity{
 
         // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
         //my admob app id=        ca-app-pub-4170269433133188~7483411963
-       /* MobileAds.initialize(this, String.valueOf(R.string.admobapptestid));
+       MobileAds.initialize(this, String.valueOf(R.string.admobapptestid));
         mAdView= (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-*/
-        /*mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("1569e01a-90a6-4e0d-bcd4-7b9a56ca3436");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
-        Log.d("Tag",""+mInterstitialAd.isLoaded());*/
+        Log.d("Tag",""+mInterstitialAd.isLoaded());
         adWv = (WebView) findViewById(R.id.adWv);
 
         lvmain=(ListView)findViewById(R.id.lvmain);
@@ -1179,7 +1179,7 @@ public class supermain extends AppCompatActivity{
                     dbase=db.getReadableDatabase();
                     String cread="select * from user";
                     Cursor cursor2=dbase.rawQuery(cread,null);
-                  //  Toast.makeText(supermain.this, "c2 count"+cursor2.getCount(), Toast.LENGTH_SHORT).show();
+                  //ZAzxxc  Toast.makeText(supermain.this, "c2 count"+cursor2.getCount(), Toast.LENGTH_SHORT).show();
                     strSearch=new String[cursor2.getCount()][5];
 //            Log.d("cursor","logged"+cq);
                     for(int i=0;i<cursor2.getCount();i++) {

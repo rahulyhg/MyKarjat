@@ -65,7 +65,7 @@
 {"Raigad Bank","","Tilak Chawk, Above Kapaleshwar Mandir, Karjat-Raigad 410201","","","","6"},
 {"Apna Sahakari Bank LTD","IFSC: ASBL0000074","Gr.Floor & First Floor, Karjat Muncipal Council Administration Bldg,Karjat-Raigad 410201","","","","6"},
 
-{"Dagade Vadewale","Mr. Chandrakant V. Dagade","Gujarati Wada, Kacheri Road, Karjat-Raigad 410201","9011778442","","snacks","6"},
+{"Dagade Vadewale","Mr. Charudatta V. Dagade","Gujarati Wada, Kacheri Road, Karjat-Raigad 410201","9011778442","","snacks","6"},
 {"Ganesh Tea House","Mr.Krishna Bhoir","Kacheri Road, Karjat-Raigad 410201","9527282543","","snacks","6"},
 {"Ravi Tea House","Mr.Ravindra Gholap","Mahavir Peth, Karjat-Raigad 410201  ","9225685887","","snacks","6"},
 {"Sattu vadewale","Mr.Santosh Dabhane","Near Dr.Ambedkar Putala, Karjat-Raigad 410201","9371899979 / 9049098999","","snacks","6"},
