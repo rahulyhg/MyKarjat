@@ -12,6 +12,7 @@
     android:orientation="vertical"
     android:background="#ddd"
     tools:context="harshad.mykarjat.supermain"
+    xmlns:appbrain="http://schemas.android.com/apk/lib/com.appbrain"
 
     >
 
@@ -140,6 +141,11 @@
         ads:adSize="BANNER"
         ads:adUnitId="@string/adunitidtest">
     </com.google.android.gms.ads.AdView>
+    <com.appbrain.AppBrainBanner
+        android:id="@+id/apb"
+        appbrain:adid="ban-20fcf1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

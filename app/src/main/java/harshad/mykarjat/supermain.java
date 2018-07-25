@@ -52,6 +52,9 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 
+import com.appbrain.AdId;
+import com.appbrain.AppBrainBanner;
+import com.appbrain.InterstitialBuilder;
 import com.firebase.client.Firebase;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -799,6 +802,8 @@ public class supermain extends AppCompatActivity{
 
     TextView tvChat,tvHome,tvArticles,tvRegister,tvNews;
 
+    InterstitialBuilder interstitialBuilder;
+
 
     public static void ifnet(){
         act.finish();
@@ -808,6 +813,15 @@ public class supermain extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+        ll = (LinearLayout) findViewById(R.id.activity_supermain);
+
+       /* interstitialBuilder = InterstitialBuilder.create()
+                .setAdId(AdId.custom("int-2033f6")).preload(this);
+
+         interstitialBuilder.show(this);
+*/
         act=this;
 
 
@@ -909,8 +923,6 @@ public class supermain extends AppCompatActivity{
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         Log.d("Tag",""+mInterstitialAd.isLoaded());*/
         adWv = (WebView) findViewById(R.id.adWv);
-
-        ll = (LinearLayout) findViewById(R.id.activity_supermain);
 
         lvmain=(ListView)findViewById(R.id.lvmain);
 
@@ -1107,7 +1119,7 @@ public class supermain extends AppCompatActivity{
 
                                     // db.enterdata(pson.getName(),pson.getShopname(),pson.getAddress(),pson.getPhone(),pson.getKeywords());
 
-                                    Log.d("logg","inside i "+data.getKey()+" "+dataSnapshot.getChildrenCount());
+                                    //Log.d("logg","inside i "+data.getKey()+" "+dataSnapshot.getChildrenCount());
                                     j=0;
                                     i++;
 
