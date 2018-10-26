@@ -2,9 +2,9 @@ apply plugin: 'com.android.application'
 
 
 repositories {
-    maven {
+   /* maven {
         url 'http://swisscodemonkeys.github.io/appbrain-sdk/maven'
-    }
+    }*/
 }
 
 android {
