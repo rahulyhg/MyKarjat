@@ -131,7 +131,7 @@
 
 
     <com.google.android.gms.ads.AdView
-        android:visibility="gone"
+
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
         android:layout_width="match_parent"
@@ -139,7 +139,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/adunitidtest">
+        ads:adUnitId="1569e01a-90a6-4e0d-bcd4-7b9a56ca3436">
     </com.google.android.gms.ads.AdView>
     <com.appbrain.AppBrainBanner
         android:id="@+id/apb"

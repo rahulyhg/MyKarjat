@@ -18,7 +18,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        maven { url "http://dl.appnext.com/" }
+   //     maven { url "http://dl.appnext.com/" }
         maven {
             url "https://maven.google.com"
 

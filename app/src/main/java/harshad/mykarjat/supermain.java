@@ -51,10 +51,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
-
-import com.appbrain.AdId;
-import com.appbrain.AppBrainBanner;
-import com.appbrain.InterstitialBuilder;
 import com.firebase.client.Firebase;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -73,6 +69,15 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
 
 public class supermain extends AppCompatActivity{
 
@@ -802,7 +807,7 @@ public class supermain extends AppCompatActivity{
 
     TextView tvChat,tvHome,tvArticles,tvRegister,tvNews;
 
-    InterstitialBuilder interstitialBuilder;
+   // InterstitialBuilder interstitialBuilder;
 
 
     public static void ifnet(){
@@ -913,7 +918,7 @@ public class supermain extends AppCompatActivity{
 
         // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
         //my admob app id=        ca-app-pub-4170269433133188~7483411963
-       MobileAds.initialize(this, String.valueOf(R.string.admobapptestid));
+       /*MobileAds.initialize(this, String.valueOf(R.string.admobapptestid));
         mAdView= (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
@@ -922,6 +927,7 @@ public class supermain extends AppCompatActivity{
         mInterstitialAd.setAdUnitId("1569e01a-90a6-4e0d-bcd4-7b9a56ca3436");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         Log.d("Tag",""+mInterstitialAd.isLoaded());
+        */
         adWv = (WebView) findViewById(R.id.adWv);
 
         lvmain=(ListView)findViewById(R.id.lvmain);
